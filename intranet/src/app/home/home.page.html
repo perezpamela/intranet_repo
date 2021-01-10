@@ -1,20 +1,34 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Intranet Dicsys</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS_intranet.png"></ion-img>
+  <div class="formHolder">
+    <h1 class="ion-text-center">Iniciar Sesión</h1>
+    <form>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña:</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox></ion-checkbox>
+        <ion-label  class="ion-padding"> Mantener sesión iniciada.</ion-label>
+      </ion-item>
+      <ion-button color="primary" expand="block">Aceptar</ion-button>
+    
+   <div  class="ion-text-center">
+     <!--Enlace de prueba. Falta que lleve a la vista 'Recuperar contraseña'-->
+    <ion-router-link color="primary"  href="https://ionicframework.com/docs/v4/api/anchor">¿Olvidó su contraseña?</ion-router-link>
+   </div>
+  </form>
+  </div>  
+  <ion-footer class="footer">
+    <ion-img class="img-footer" src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/07/Sin-t%C3%ADtulo-1-1-350x82.jpg"></ion-img>
+  </ion-footer>
 </ion-content>
