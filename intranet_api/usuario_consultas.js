@@ -6,8 +6,9 @@ let usuario_consultas = {
     getByEmail:  async function(email,resolve, reject){
        try{
         let pool = await sql.connect(config);
-        let usuarios = await pool.request().query("SELECT * FROM usuarios where usuario_email='"+email+"'"); 
-        resolve(usuarios.recordsets);
+        let usuario =  await pool.request().query("SELECT * FROM usuarios where usuario_email='"+email+"'");
+        //let usuario = JSON.parse(usuarios).find(u => u.email == email)
+        resolve(usuario.recordset[0]);
 
        } catch (err){
            reject(err);
@@ -17,8 +18,8 @@ let usuario_consultas = {
     getByName: async function(nombre,resolve, reject){
         try{
             let pool = await sql.connect(config);
-            let usuarios = await pool.request().query("SELECT * FROM usuarios where usuario_nombre='"+nombre+"'"); 
-            resolve(usuarios.recordsets);
+            let usuario = await pool.request().query("SELECT * FROM usuarios where usuario_nombre='"+nombre+"'"); 
+            resolve(usuario.recordset[0]);
 
         }catch(error){
             reject(error);

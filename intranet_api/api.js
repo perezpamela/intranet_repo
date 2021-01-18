@@ -12,11 +12,9 @@ router.get('/usuarios/email/:email', function(req, res, next){
     tablaUsuario.getByEmail(req.params.email,
     function(datos){
 
-        if(datos[0][0]){
+        if(datos){
             res.status(200).json({
-                "status":200,
-                "statusText":"OK",
-                "data":datos
+                datos
             });
         } else{
             res.status(404).json({
@@ -32,11 +30,13 @@ router.get('/usuarios/email/:email', function(req, res, next){
 router.get('/usuarios/nombre/:nombre', function(req, res, next){
     tablaUsuario.getByName(req.params.nombre, function(datos){
 
-        if(datos[0][0]){
+        if(datos){
             res.status(200).json({
+                /*
                 "status":200,
                 "statusText":"OK",
-                "data":datos
+                "data": */
+                datos
             });
         } else{
             res.status(404).json({
