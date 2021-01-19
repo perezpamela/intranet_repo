@@ -3,10 +3,31 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LogoutPage } from './logout.page';
 
+//FALTAN CARGAR LOS PATH
 const routes: Routes = [
   {
     path: '',
-    component: LogoutPage
+    component: LogoutPage,
+
+
+    children: [
+      {
+        path: 'Inicio',
+        children: [
+          {
+            path: '',
+           // loadChildren: '../Inicio/Inicio.module#InicioModule'
+          }
+        ]
+      },
+      {
+        path: '',
+        //redirectTo: '/app/tabs/Inicio',
+        pathMatch: 'full'
+      }
+    ]
+
+
   }
 ];
 
@@ -15,3 +36,6 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class LogoutPageRoutingModule {}
+
+
+
