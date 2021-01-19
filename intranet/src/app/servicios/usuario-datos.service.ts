@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {IUsuario} from '../interfaces/IUsuario';
+//import {IError} from ... 
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({
@@ -14,6 +15,8 @@ export class UsuarioDatosService {
   //path ="http://localhost:5000";
   getUsuarioByNombre(nombre: string){
     const path = `http://localhost:5000/api/usuarios/nombre/${nombre}`; 
+
+    //if - 
     return this.http.get<IUsuario>(path);
     
   }

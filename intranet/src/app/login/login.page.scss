@@ -27,13 +27,20 @@
   }
   
   .footer{
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-end;
+    position: fixed;
+    bottom:0;
+    width: 100vw;
     
-    height: 160px;
+    
   }
 .link-recuperar-pass{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }  
+
+.login-container{
+  padding: 1rem 0;
+}
+.logo-dicsys{
+  padding:1.5rem 0;
+}

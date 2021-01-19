@@ -35,7 +35,9 @@ export class LoginPage implements OnInit {
         this.nombre = res["usuario_nombre"];
         this.email = res["usuario_email"];
         this.password = res["usuario_password"];
+        this.estado = res["usuario_estado"];
 
+        if(this.estado==1){
         if(this.CheckeoPass(this.i_pass,this.password)){
           //llevarlo al dashboard
           alert("Se logeó");
@@ -43,6 +45,11 @@ export class LoginPage implements OnInit {
           //mensaje de error
           alert("No se logeó");
         }
+
+      } else{
+        alert("Ese usuario está borrado.")
+      }
+
       });  
     }
     else{

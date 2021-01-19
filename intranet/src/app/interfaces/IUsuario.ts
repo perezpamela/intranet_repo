@@ -4,6 +4,6 @@ export interface IUsuario{
     usuario_email:string;
     usuario_password:string;
     usuario_estado: number;
-    mensaje: string;
+    mensaje: string; //mensaje de error si no encuentra nada
 
 }
