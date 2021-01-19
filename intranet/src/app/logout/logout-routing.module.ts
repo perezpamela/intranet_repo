@@ -9,25 +9,6 @@ const routes: Routes = [
     path: '',
     component: LogoutPage,
 
-
-    children: [
-      {
-        path: 'Inicio',
-        children: [
-          {
-            path: '',
-           // loadChildren: '../Inicio/Inicio.module#InicioModule'
-          }
-        ]
-      },
-      {
-        path: '',
-        //redirectTo: '/app/tabs/Inicio',
-        pathMatch: 'full'
-      }
-    ]
-
-
   }
 ];
 

@@ -1,42 +1,56 @@
+
+
+<div>
 <ion-header >
   <ion-toolbar>
     <ion-title size="large"><ion-icon name="arrow-back"></ion-icon> Configuracion</ion-title>
   </ion-toolbar>
 </ion-header>
+</div>
 
 
 
-<div class="login-container">
-  <div class="formHolder">
-    <ion-item  class="alignme">
-      <ion-label position="Stacked">Salir</ion-label>
-    </ion-item>
-    
-  </div>
-  </div>
+
+<body>
+  <ion-app>
+    <ion-tabs>
+
+      <ion-tab tab="Configuracion">
+        <ion-header translucent>
+            <ion-button color="light" expand="full"  href="\login">Salir</ion-button>
+        </ion-header>
+        <ion-content >
+          <h1>Configuracion</h1>
+        </ion-content>
+      </ion-tab>
+      
+      
+      <ion-tab-bar slot="bottom">
+      
+        <ion-tab-button tab="Inicio">
+          <ion-label>Inicio</ion-label>
+          <ion-icon name="home"></ion-icon>
+        </ion-tab-button>
+      
+        <ion-tab-button tab="Perfil">
+          <ion-label>Perfil</ion-label>
+          <ion-icon name="person-circle"></ion-icon>
+        </ion-tab-button>
+      
+        <ion-tab-button tab="Configuracion">
+          <ion-label>Configuracion</ion-label>
+          <ion-icon name="settings"></ion-icon>
+        </ion-tab-button>
+      
+      </ion-tab-bar>
+      
+    </ion-tabs>
+  </ion-app>
+</body>
 
 
 
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-
-    <ion-tab-button tab="Inicio">
-      <ion-icon name="home"></ion-icon>
-      <ion-label>Inicio</ion-label>
-    </ion-tab-button>
 
 
-    <ion-tab-button tab="Perfil">
-      <ion-icon name="person-circle"></ion-icon>
-      <ion-label>Perfil</ion-label>
-    </ion-tab-button>
 
-
-    <ion-tab-button tab="Configuracion">
-      <ion-icon name="settings"></ion-icon>
-      <ion-label>Configuracion</ion-label>
-    </ion-tab-button>
-    
-  </ion-tab-bar>
-</ion-tabs>
 
