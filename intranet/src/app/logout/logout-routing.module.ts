@@ -8,6 +8,16 @@ const routes: Routes = [
   {
     path: '',
     component: LogoutPage,
+    children:[
+      {
+        path:'Inicio',
+        //loadChildren: './logout/logout.module#LogoutPageModule' AGREGAR LA RUTA A INICIO
+      },
+      {
+        path:'Configuracion',
+        
+      },
+    ]
 
   }
 ];
