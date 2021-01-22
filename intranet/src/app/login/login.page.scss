@@ -25,15 +25,36 @@
   #container a {
     text-decoration: none;
   }
+
+ion-icon{
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
   
   .footer{
     display:flex;
+    position: fixed;
+    bottom:0;
     flex-direction:column;
     justify-content: flex-end;
     
     height: 160px;
   }
 .link-recuperar-pass{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }  
+.img-logo{
+  margin: 1rem 0 0 0;
+}
+.formHolder{
+  margin: 1rem 0;
+}
+.btn-login{
+margin: 1rem 0;
+}
+.error_container{
+  color:red;
+  margin: 1rem 0;
+  
+}

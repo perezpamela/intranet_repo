@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 import {UsuarioDatosService} from '../servicios/usuario-datos.service';
+import {IUsuario} from '../interfaces/IUsuario';
 
 @Component({
   selector: 'app-login',
@@ -8,60 +10,56 @@ import {UsuarioDatosService} from '../servicios/usuario-datos.service';
 })
 export class LoginPage implements OnInit {
 
-  usuario:string; 
-  nombre:string;
-  email:string;
-  password: string;
+  usuario:IUsuario;
+  i_usuario:string;
   i_pass:string;
-  estado: number; 
+  i_mantener_sesion:boolean;
+  error_password:string;
   
-
-
+  
   constructor(
-    private usuarioDatosService: UsuarioDatosService
+    private usuarioDatosService: UsuarioDatosService,
+    private router:Router
   ) { }
 
   ngOnInit() {
   }
 
-  CheckeoPass(pass:string, input:string){
+  VerficicaPass(pass:string, input:string){
     return pass===input;
   };
 
   Login(usuario:string){
-    if(usuario.includes('@')){
+    if(usuario.includes('@')){                  //Si ingresó un email ----->
       this.usuarioDatosService.getUsuarioByEmail(usuario).subscribe(u => {
-        let res= u["datos"];
-        this.nombre = res["usuario_nombre"];
-        this.email = res["usuario_email"];
-        this.password = res["usuario_password"];
-
-        if(this.CheckeoPass(this.i_pass,this.password)){
-          //llevarlo al dashboard
-          alert("Se logeó");
-        }else{
-          //mensaje de error
-          alert("No se logeó");
-        }
+        this.usuario=u;
+        if(this.usuario!==null && this.usuario.usuario_estado!==0){
+            if(this.VerficicaPass(this.i_pass, this.usuario.usuario_password)){
+              this.error_password="";
+              this.router.navigateByUrl('home');
+            } else{
+              this.error_password="Los datos ingresados son incorrectos."
+            }
+        } else{
+          this.error_password="El email no pertenece a un usuario registrado o activo.";
+        } 
       });  
-    }
-    else{
-      this.usuarioDatosService.getUsuarioByNombre(usuario).subscribe(u => {
-        let res= u["datos"];
-        this.nombre = res["usuario_nombre"];
-        this.email = res["usuario_email"];
-        this.password = res["usuario_password"];
-        
-        if(this.CheckeoPass(this.i_pass,this.password)){
-          //llevarlo al dashboard
-          alert("Se logeó");
-        }else{
-          //mensaje de error
-          alert("No se logeó");
-        }
-      
+                                            //Si ingresó un nombre de usuario ----->
+    }else{ 
+        this.usuarioDatosService.getUsuarioByNombre(usuario).subscribe(u => {
+          this.usuario = u; 
+          if(this.usuario!==null && this.usuario.usuario_estado!==0){
+            if(this.VerficicaPass(this.i_pass, this.usuario.usuario_password)){
+              this.error_password="";
+              this.router.navigateByUrl('home');
+            } else{
+              this.error_password="Los datos ingresados son incorrectos."
+            }
+          } else{
+            this.error_password="El email no pertenece a un usuario registrado o activo.";
+          }
       });
-    }
+    }   
   }
 
 }

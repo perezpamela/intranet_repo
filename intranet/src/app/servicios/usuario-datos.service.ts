@@ -11,12 +11,15 @@ export class UsuarioDatosService {
     private http: HttpClient
   ) { }
 
-  //path ="http://localhost:5000";
+ 
+ 
+   //path ="http://localhost:5000";
   getUsuarioByNombre(nombre: string){
     const path = `http://localhost:5000/api/usuarios/nombre/${nombre}`; 
     return this.http.get<IUsuario>(path);
     
   }
+
 
   getUsuarioByEmail(email: string){
     const path = `http://localhost:5000/api/usuarios/email/${email}`; 
