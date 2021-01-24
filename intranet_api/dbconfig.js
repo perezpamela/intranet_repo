@@ -1,4 +1,20 @@
-const config = {
+var mysql=require('mysql');
+
+const pool = mysql.createPool({
+  connectionLimit : 100, //importante
+  host: '127.0.0.1',
+  database: 'intranet',//nombre de la base de datos (la que cree yo)
+  user: 'root',
+  password: '1234'
+});
+
+module.exports = pool;
+
+
+
+
+
+/*const config = {
     database:'IntranetDB',  
     server: 'localhost\\SQLEXPRESS',
     driver: 'msnodesqlv8',

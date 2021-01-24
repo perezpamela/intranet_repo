@@ -1,4 +1,49 @@
-let config = require("./dbconfig");
+let pool = require("./dbconfig");
+const mysql = require('mysql');
+
+
+let usuario_consultas = {
+
+
+    getByEmail:  async function(email,resolve, reject){
+        try{
+            pool.query("SELECT * FROM wp_users where user_email='"+email+"'",(err, data) => {
+            if(err) {
+                console.error(err);
+                return;
+            }
+            var string=JSON.stringify(data);
+            var usuario =  JSON.parse(string);
+            resolve(usuario);
+        });
+        } catch (err){
+            reject(err);
+        }
+     },
+
+     getByName: async function(nombre,resolve, reject){
+        try{
+            pool.query("SELECT * FROM wp_users where user_login='"+nombre+"'",(err, data) => {
+            if(err) {
+                console.error(err);
+                return;
+            }
+            var string=JSON.stringify(data);
+            var usuario =  JSON.parse(string);
+            resolve(usuario);
+        });
+        } catch (err){
+            reject(err);
+        }
+    },
+
+
+}
+module.exports = usuario_consultas;
+
+
+
+/*let config = require("./dbconfig");
 //const sql = require("mssql");
 const sql = require('mssql/msnodesqlv8'); 
 
@@ -26,4 +71,4 @@ let usuario_consultas = {
         }
     }
 }
-module.exports = usuario_consultas;
+module.exports = usuario_consultas;*/
