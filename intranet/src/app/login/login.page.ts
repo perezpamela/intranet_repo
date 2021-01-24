@@ -36,6 +36,7 @@ export class LoginPage implements OnInit {
         if(this.usuario!==null && this.usuario.usuario_estado!==0){
             if(this.VerficicaPass(this.i_pass, this.usuario.usuario_password)){
               this.error_password="";
+              alert(this.i_mantener_sesion);
               this.router.navigateByUrl('home');
             } else{
               this.error_password="Los datos ingresados son incorrectos."
