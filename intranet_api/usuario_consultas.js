@@ -5,23 +5,29 @@ const mysql = require('mysql');
 let usuario_consultas = {
 
 
-    getByEmail:  async function(email,resolve, reject){
+    getByEmail:  async function(email,dato,resolve, reject){
+        
+        if(dato==1)//si dato->0 =mail si dato->1=user
+        { tipoDato='user_login' }
+           else { tipoDato='user_email' }
+            
         try{
-            pool.query("SELECT * FROM wp_users where user_email='"+email+"'",(err, data) => {
+            pool.query("SELECT * FROM wp_users WHERE "+tipoDato+" = '"+email+"'",(err, data) => {
             if(err) {
                 console.error(err);
                 return;
             }
             var string=JSON.stringify(data);
             var usuario =  JSON.parse(string);
-            resolve(usuario);
+            resolve(string);
         });
         } catch (err){
             reject(err);
         }
      },
 
-     getByName: async function(nombre,resolve, reject){
+     
+    /* getByName: async function(nombre,resolve, reject){
         try{
             pool.query("SELECT * FROM wp_users where user_login='"+nombre+"'",(err, data) => {
             if(err) {
@@ -35,10 +41,12 @@ let usuario_consultas = {
         } catch (err){
             reject(err);
         }
-    },
+    },*/
 
 
 }
+
+
 module.exports = usuario_consultas;
 
 
