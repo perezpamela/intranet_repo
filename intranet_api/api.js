@@ -25,9 +25,7 @@ router.post('/usuarios/email',jsonParser, function (req, res)  {
         function(datos){
             
             var usuario=JSON.parse(datos);
-         
 
-            
                 if (usuario.length==0) {//si no encuentra datos
                 res.status(401).send('Invalid Email')
                 } else 
