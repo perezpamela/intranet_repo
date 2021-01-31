@@ -13,13 +13,13 @@ export class UsuarioDatosService {
   ) { }
 
   //path ="http://localhost:5000";
-  getUsuarioByNombre(nombre: string){
+ /* getUsuarioByNombre(nombre: string){
     const path = `http://localhost:5000/api/usuarios/nombre/${nombre}`; 
 
     //if - 
     return this.http.get<IUsuario>(path);
     
-  }
+  }*/
 
   getUsuarioByEmail(email: string){
     const path = `http://localhost:5000/api/usuarios/email/${email}`; 
