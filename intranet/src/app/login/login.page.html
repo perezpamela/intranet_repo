@@ -13,17 +13,17 @@
     <form>
       <ion-item>
         <ion-label position="floating">Usuario/email</ion-label>
-        <ion-input [(ngModel)]="usuario" name="usuario" type="text"></ion-input>
+        <ion-input [(ngModel)]="mail" name="usuario" type="text"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Contraseña:</ion-label>
-        <ion-input [(ngModel)]="i_pass" name="i_pass" type="password"></ion-input>
+        <ion-input [(ngModel)]="pass" name="i_pass" type="password"></ion-input>
       </ion-item>
       <ion-item>
         <ion-checkbox></ion-checkbox>
         <ion-label  class="ion-padding"> Mantener sesión iniciada.</ion-label>
       </ion-item>
-      <ion-button color="primary" expand="block" (click)="Login(usuario)">Iniciar Sesión</ion-button>
+      <ion-button color="primary" expand="block" (click)="Login()">Iniciar Sesión</ion-button>
     
    <div  class="ion-text-center link-recuperar-pass">
      <!--Enlace de prueba. Falta que lleve a la vista 'Recuperar contraseña'-->

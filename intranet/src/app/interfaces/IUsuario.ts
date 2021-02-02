@@ -1,4 +1,4 @@
-export interface IUsuario{    
+/*export interface IUsuario{    
     usuarioID: number;
     usuario_nombre:string;
     usuario_email:string;
@@ -6,4 +6,4 @@ export interface IUsuario{
     usuario_estado: number;
     mensaje: string; //mensaje de error si no encuentra nada
 
-}
+}*/
