@@ -61,7 +61,10 @@ export class LoginPage implements OnInit {
        // this._router.navigate(['/special'])//SOLO ES LA NAVEGACION A LA PAGINA DE INICIO
 
       },
-      err => console.log(err)
+      err => {
+        console.log(err)
+        alert(err.error);
+      }
     )
    // }
    /* else{
