@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UsuarioDatosService} from '../servicios/usuario-datos.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -20,8 +21,13 @@ export class LoginPage implements OnInit {
 
 
   constructor(
-    private usuarioDatosService: UsuarioDatosService
-  ) { }
+    private usuarioDatosService: UsuarioDatosService,
+    public menu: MenuController
+  ) { 
+    this.menu.swipeGesture(false)
+  }
+
+   
 
   ngOnInit() {
   }
