@@ -50,7 +50,6 @@ export class LoginPage implements OnInit {
         this.email = res["usuario_email"];
         this.password = res["usuario_password"];
         this.estado = res["usuario_estado"];
-
         if(this.estado==1){
         if(this.CheckeoPass(this.i_pass,this.password)){
           //llevarlo al dashboard
@@ -59,10 +58,10 @@ export class LoginPage implements OnInit {
           //mensaje de error
           alert("No se logeó");
         }
-
       } else{
         alert("Ese usuario está borrado.")
       }*/
+      alert("Contraseña ok ");
       localStorage.setItem('token', res.token) // T lallave es el npmbre 'token', el otro valor es el TOKEN que devuelve la api
        // this._router.navigate(['/special'])//SOLO ES LA NAVEGACION A LA PAGINA DE INICIO
 

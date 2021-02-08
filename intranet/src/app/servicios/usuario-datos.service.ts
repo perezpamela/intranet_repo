@@ -36,7 +36,9 @@ export class UsuarioDatosService {
   }*/
 
   login(loginUserData) {
+    
     return this.http.post<any>('http://localhost:5000/api/usuarios/email', loginUserData)
+    
   }
 
 
@@ -44,7 +46,7 @@ export class UsuarioDatosService {
     localStorage.removeItem('token')
     this._router.navigate(['/login'])
   }
-
+  
 
 
 }
