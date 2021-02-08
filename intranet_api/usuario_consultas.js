@@ -6,20 +6,22 @@ let usuario_consultas = {
 
 
     getByEmail:  async function(email,dato,resolve, reject){
+
         
         if(dato==1)//si dato->0 =mail si dato->1=user
         { tipoDato='user_login' }
            else { tipoDato='user_email' }
-            
+    
         try{
             pool.query("SELECT * FROM wp_users WHERE "+tipoDato+" = '"+email+"'",(err, data) => {
             if(err) {
                 console.error(err);
                 return;
-            }
+            }else{
             var string=JSON.stringify(data);
             var usuario =  JSON.parse(string);
             resolve(string);
+        }
         });
         } catch (err){
             reject(err);
