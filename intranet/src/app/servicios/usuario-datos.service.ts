@@ -48,5 +48,11 @@ export class UsuarioDatosService {
   }
   
 
+  loggedIn() {
+    
+    return !!localStorage.getItem('token')//da true si esta, false si no esta el token
+    
+  }
+
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UsuarioDatosService} from '../servicios/usuario-datos.service';
+import { UsuarioDatosService } from '../servicios/usuario-datos.service';
 import { MenuController } from '@ionic/angular';
 
 @Component({
@@ -30,6 +30,7 @@ export class LoginPage implements OnInit {
    
 
   ngOnInit() {
+    localStorage.removeItem('token')//remover cualquier rastro de un token
   }
 
   /*CheckeoPass(pass:string, input:string){
@@ -64,7 +65,8 @@ export class LoginPage implements OnInit {
       alert("Contraseña ok ");
       localStorage.setItem('token', res.token) // T lallave es el npmbre 'token', el otro valor es el TOKEN que devuelve la api
        // this._router.navigate(['/special'])//SOLO ES LA NAVEGACION A LA PAGINA DE INICIO
-
+       var asd=localStorage.getItem('token');
+       console.log(asd)
       },
       err => {
         console.log(err)

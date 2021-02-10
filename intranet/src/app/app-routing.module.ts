@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+import { AuthGuard } from './auth.guard';//importamos de la carpeta auth.guard...no se donde esta en mi front
+
 const routes: Routes = [
   
   {
@@ -14,7 +16,9 @@ const routes: Routes = [
   },
   {
     path: 'logout',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
+    
   },
   
 
