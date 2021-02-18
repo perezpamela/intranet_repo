@@ -65,8 +65,8 @@ export class LoginPage implements OnInit {
       alert("Contraseña ok ");
       localStorage.setItem('token', res.token) // T lallave es el npmbre 'token', el otro valor es el TOKEN que devuelve la api
        // this._router.navigate(['/special'])//SOLO ES LA NAVEGACION A LA PAGINA DE INICIO
-       var asd=localStorage.getItem('token');
-       console.log(asd)
+      // var asd=localStorage.getItem('token');
+      // console.log(asd)
       },
       err => {
         console.log(err)

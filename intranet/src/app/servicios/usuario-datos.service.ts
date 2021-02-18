@@ -5,6 +5,8 @@ import {HttpClient} from '@angular/common/http';
 
 import { Router } from '@angular/router'
 
+import { IComentario } from '../interfaces/IComentairo.interface';
+
 
 @Injectable({
   providedIn: 'root'
@@ -52,6 +54,12 @@ export class UsuarioDatosService {
     
     return !!localStorage.getItem('token')//da true si esta, false si no esta el token
     
+  }
+
+
+  traerComentarios(loginUserData){//le paso el usuario
+    const path = `http://localhost:5000/api/usuarios/comentario/${loginUserData}`; //loginUserData= desa1)
+    return this.http.get<IComentario >(path);
   }
 
 

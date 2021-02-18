@@ -1,0 +1,94 @@
+//para el perfil---->
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    //width: 40%;
+    margin-top: -10%;
+    width: 30%;
+    height: 30%;
+  }
+
+  .nombreUsuario {
+   margin-left: 25px;
+   margin-top: 25px;
+  }
+
+  .img1 {
+  
+    margin-left: 5%;
+    margin-right: 5%;
+  
+  }
+  
+  .img2 {
+    display: block;
+    //margin-left: 10%;
+   // margin-right: 10%;
+    width: 100%;
+    margin-top: 10%;
+    
+  }
+  
+  
+  
+  
+  
+  
+  .img4 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  
+  .button{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .overflow{
+      height: 200px;
+    overflow: hidden;
+  
+  }
+  
+  
+  .fondologin{
+    --ion-background-color:#6fc2c8
+  }
+  
+  .fondoitem{
+    --background: rgba(0,0,0,0);
+    //--border-color: rgba(0,0,0,0);
+    //display: block;
+    //margin-top: -50%;
+    //margin-left: 5%;
+  
+  
+  }
+  
+  .asd{
+    .select-icon {
+      .select-icon-inner {
+         color : rgba(0,0,0,0) !important;
+      }
+    }
+  }
+  
+  ion-slides{
+      width: 100%;
+  }
+  
+  .slide{
+      background-color: antiquewhite;
+      width: 500px;
+      height: 300px;
+  }
+  
+  ion-card{
+      //overflow: unset !important;
+      width: 300px;
+      height: 200px;
+  }
