@@ -29,13 +29,13 @@ router.post('/usuarios/email',jsonParser, function (req, res)  {
             var usuario=JSON.parse(datos);
  
                 if (usuario.length==0) {//si no encuentra datos
-                res.status(401).send('Correo o Usuario invalidos')
+                res.send('Correo o Usuario invalidos')
                 } else 
                 if (usuario[0]["user_status"]==1) {//1= Usuario bloqueado
-                    res.status(403).send('Usuario bloqueado')
+                    res.send('Usuario bloqueado') 
                 } else 
                 if ( hasher.CheckPassword(userData.pass, usuario[0]["user_pass"])===false ) {
-                    res.status(403).send('Contraseña incorrecta')
+                    res.send('Contraseña incorrecta')
                 } else {
                     console.log("hacemos el tokennnn..."); 
 
