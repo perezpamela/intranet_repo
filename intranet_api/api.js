@@ -16,7 +16,7 @@ app.use('/api', router);
 
 
 router.post('/usuarios/email',jsonParser, function (req, res)  {
-
+    
     let userData = req.body//req.body:  lo que mandamos del front lo ponemos en userData
     let band=1
     if(userData.mail.includes('@')){ 
@@ -25,17 +25,17 @@ router.post('/usuarios/email',jsonParser, function (req, res)  {
 
     tablaUsuario.getByEmail(userData.mail,band,
         function(datos){
-            
+             
             var usuario=JSON.parse(datos);
-
+ 
                 if (usuario.length==0) {//si no encuentra datos
-                res.status(401).send('Correo o Usuario invalidos')
+                res.send('Correo o Usuario invalidos')
                 } else 
                 if (usuario[0]["user_status"]==1) {//1= Usuario bloqueado
-                    res.status(403).send('Usuario bloqueado')
+                    res.send('Usuario bloqueado') 
                 } else 
                 if ( hasher.CheckPassword(userData.pass, usuario[0]["user_pass"])===false ) {
-                    res.status(403).send('Contraseña incorrecta')
+                    res.send('Contraseña incorrecta')
                 } else {
                     console.log("hacemos el tokennnn..."); 
 
@@ -52,6 +52,21 @@ router.post('/usuarios/email',jsonParser, function (req, res)  {
         });
     });
 
+    
+    //http://localhost:5000/api/usuarios/comentario/${loginUserData}`; 
+    router.get('/usuarios/comentario/:id', function(req, res, next){
+        tablaUsuario.getComById(req.params.id, function(datos){
+
+                res.status(200).json({
+                    "status":200,
+                    "statusText":"OK",
+                    "data": 
+                    datos
+                });
+
+        }, function(err){
+            next(err);});
+    });
 
 
 /*router.get('/usuarios/nombre/:nombre', function(req, res, next){
@@ -76,9 +91,29 @@ router.post('/usuarios/email',jsonParser, function (req, res)  {
         next(err);});
 });*/
 
+router.put('/usuarios/info',jsonParser, function (req, res)  {
+
+    let userData = req.body
+
+    tablaUsuario.putInformacion(userData, function(datos){
+
+            res.status(200).json({
+                "status":200,
+                "statusText":"OK",
+                "data": 
+                datos
+            });
+
+    }, function(err){
+        console.log('error PUT intranet_api -> api')
+        next(err);});
+});
+
+
+
+
+
 let port = process.env.port || 5000;
 
 app.listen(port, function(){console.log("Node Server is running on http://localhost:"+port)});
-
-
 

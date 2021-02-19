@@ -14,10 +14,10 @@ export class AuthGuard implements CanActivate {
 
     canActivate(): boolean {
       if (this._UsuarioDatosService.loggedIn()) {//la ruta del logged in en usuario-datos.services.ts
-        console.log('true - Si esta el token')
+        //console.log('true - Si esta el token')
         return true
       } else {
-        console.log('false - No esta el token')            
+        //console.log('false - No esta el token')            
         this._router.navigate(['/login'])
         return false
       }

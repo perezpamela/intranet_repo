@@ -29,6 +29,23 @@ let usuario_consultas = {
      },
 
      
+      getComById: async function(id,resolve, reject){
+        try{
+            pool.query("SELECT wp_comments.comment_content, wp_comments.comment_type FROM wp_comments INNER JOIN wp_users ON wp_users.id=wp_comments.user_id WHERE wp_users.user_login LIKE '"+id+"' OR wp_users.user_email LIKE '"+id+"' ;" ,(err, data) => {
+            if(err) {
+                console.error(err);
+                return;
+            }
+            var string = JSON.stringify(data);
+            var comentario = JSON.parse(string);
+            resolve(comentario);
+        });
+        } catch (err){
+            reject(err);
+        }
+    },
+    
+
     /* getByName: async function(nombre,resolve, reject){
         try{
             pool.query("SELECT * FROM wp_users where user_login='"+nombre+"'",(err, data) => {
@@ -46,9 +63,22 @@ let usuario_consultas = {
     },*/
 
 
+    putInformacion: async function(userData, reject){
+        try{
+            pool.query("UPDATE wp_comments SET comment_content='"+userData.informacion+"' WHERE comment_type='Informacion' and user_id =( SELECT id FROM wp_users WHERE user_login='"+userData.usuario+"' OR user_email='"+userData.usuario+"')")
+        } catch (err){
+            reject(err);
+        }
+    },
+
+
+
+    
+    
+
+
+
 }
-
-
 module.exports = usuario_consultas;
 
 
