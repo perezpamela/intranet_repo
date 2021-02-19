@@ -18,10 +18,6 @@ export class UsuarioDatosService {
     private _router: Router
   ) { }
 
-
-
-
-
   //path ="http://localhost:5000";
  /* getUsuarioByNombre(nombre: string){
     const path = `http://localhost:5000/api/usuarios/nombre/${nombre}`; 

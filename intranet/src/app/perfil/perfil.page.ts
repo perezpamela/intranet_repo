@@ -119,7 +119,7 @@ cargar(){
   var us=localStorage.getItem('usuario').toUpperCase();
   document.getElementById('nombreUsuarioLbl').innerHTML = us;
 
-  this.usuarioDatosService.traerComentarios(us).subscribe(u => {//us=desa1
+  this.usuarioDatosService.traerComentarios(us).subscribe(u => {//us=desa1 localStorage
     let res= u["data"];
     //console.log("res= "+res)
     
