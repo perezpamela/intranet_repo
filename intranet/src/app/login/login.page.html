@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Intranet Dicsys</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-img class="logo-dicsys" src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS_intranet.png"></ion-img>
+  
+  
+  <div class="login-container">
+  <div class="formHolder">
+    
+    <form>
+      <ion-item>
+        <ion-label position="floating">Usuario/email</ion-label>
+        <ion-input [(ngModel)]="mail" name="usuario" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña:</ion-label>
+        <ion-input [(ngModel)]="pass" name="i_pass" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox></ion-checkbox>
+        <ion-label  class="ion-padding"> Mantener sesión iniciada.</ion-label>
+      </ion-item>
+      <ion-button color="primary" expand="block" (click)="Login()">Iniciar Sesión</ion-button>
+    
+   <div  class="ion-text-center link-recuperar-pass">
+     <!--Enlace de prueba. Falta que lleve a la vista 'Recuperar contraseña'-->
+    <ion-router-link color="primary"  href="https://ionicframework.com/docs/v4/api/anchor">¿Olvidó su contraseña?</ion-router-link>
+  </div>  
+  </form>
+  </div>
+  
+
+  </div>
+  <ion-footer class="footer">
+    <ion-img class="img-footer" src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/07/Sin-t%C3%ADtulo-1-1-350x82.jpg"></ion-img>
+  </ion-footer>
+</ion-content>

@@ -1,3 +1,63 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" content-id="main" >
+    <!-- Esto es si tenemos mas de un menu nada mas -z menuId="main"...adentro-->
+    <!-- cpntent-id es una referencia para router-outlet (abajooo de todo aqui)-->
+    <ion-header >
+      <ion-item color="primary">
+        <ion-icon name="person"></ion-icon>
+        <ion-title>Menu</ion-title>
+      </ion-item>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          
+          <ion-item name="contact"> 
+            <ion-icon slot="start"></ion-icon>
+            <ion-label>Inicio</ion-label>
+          </ion-item>
+          <ion-item > 
+            <ion-icon slot="start"></ion-icon>
+            <ion-label>Clientes</ion-label>
+          </ion-item>
+          <ion-item > 
+            <ion-icon slot="start"></ion-icon>
+            <ion-label>Herramientas corporativas</ion-label>
+          </ion-item>
+          <ion-item > 
+            <ion-icon slot="start"></ion-icon>
+            <ion-label>Redes sociales</ion-label>
+          </ion-item>
+          <ion-item > 
+            <ion-icon slot="start"></ion-icon>
+            <ion-label>Datos utiles</ion-label>
+          </ion-item>
+          <ion-item > 
+            <ion-icon slot="start"></ion-icon>
+            <ion-label>Novedades</ion-label>
+          </ion-item>
+
+
+          <ion-item > 
+            <ion-icon slot="start"></ion-icon>
+            <ion-label>Mi Perfil</ion-label>
+          </ion-item>
+
+          <ion-item (click)="Logout()"> 
+            <ion-icon  slot="start"></ion-icon>
+            <ion-label>Cerrar sesión</ion-label>
+          </ion-item> 
+
+          <ion-item (click)="Logout()"> 
+            <ion-icon  slot="start"></ion-icon>
+            <ion-label>Acerca de</ion-label>
+          </ion-item>
+          
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
