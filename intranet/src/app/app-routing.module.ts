@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+import { AuthGuard } from './auth.guard';//importamos de la carpeta auth.guard...no se donde esta en mi front
+
 const routes: Routes = [
   
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -13,10 +15,16 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
+
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+  {
 
+    path: 'logout',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
+  }
 
 ];
 

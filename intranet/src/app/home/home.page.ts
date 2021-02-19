@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import {UsuarioDatosService} from '../servicios/usuario-datos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,14 +16,22 @@ export class HomePage implements OnInit {
       disableOnInteraction: false,
     }
   };
-  
-  constructor(private menuCtrl: MenuController) { 
-    
+
+  usuario = localStorage.getItem('usuario');
+  constructor(private menuCtrl: MenuController,
+      	      private uService: UsuarioDatosService,
+              private router: Router) { 
   }
   
   ngOnInit() {
+    
   }
-
+  logout(){
+    this.uService.logoutUser();
+    this.router.navigate(['/home']);
+  }
   
+
+
 
 }
