@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import {UsuarioDatosService} from './servicios/usuario-datos.service';
 
+import { Router } from '@angular/router'
+
 
 @Component({
   selector: 'app-root',
@@ -17,7 +19,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private usuarioDatosService: UsuarioDatosService
+    private usuarioDatosService: UsuarioDatosService,
+    private _router: Router,
   ) {
     this.initializeApp();
   }
@@ -32,6 +35,10 @@ export class AppComponent {
 
   Logout(){
     this.usuarioDatosService.logoutUser();
+  }
+
+  Perfil(){
+    this._router.navigate(['/perfil']);;
   }
 
 

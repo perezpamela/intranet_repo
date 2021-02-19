@@ -116,7 +116,7 @@ async presentActionSheet() {
 
 
 cargar(){
-  var us=localStorage.getItem('usuario');
+  var us=localStorage.getItem('usuario').toUpperCase();
   document.getElementById('nombreUsuarioLbl').innerHTML = us;
 
   this.usuarioDatosService.traerComentarios(us).subscribe(u => {//us=desa1
@@ -153,7 +153,9 @@ cargar(){
 };
 
 
-
+volverInicio(){
+  this._router.navigate(['/logout']);//OJO!AGREGAR AQUI LA RUTA DEL EDITAR PERFIIIIIIL
+}
 
 
 
