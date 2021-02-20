@@ -17,7 +17,7 @@ export class PerfilPage implements OnInit {
     private usuarioDatosService: UsuarioDatosService,
     public actionSheetController: ActionSheetController,//inyectamos para usar action sheet
     private _router: Router,
-    private alertControl: AlertController
+    //private alertControl: AlertController
     ) { }
 
   ngOnInit(
@@ -99,13 +99,13 @@ async presentActionSheet() {
       text: 'Editar Perfil',
       icon: 'person-outline',
       handler: () => {//la funcion se dispara cuando cliqueamos
-        this._router.navigate(['/logout']);//OJO!AGREGAR AQUI LA RUTA DEL EDITAR PERFIIIIIIL
+        this._router.navigate(['/home']);//OJO!AGREGAR AQUI LA RUTA DEL EDITAR PERFIIIIIIL
       }
     }, {  
       text: 'Ver Privacidad',
       icon: 'lock-closed-outline',
       handler: () => {
-        this._router.navigate(['/logout']);//RUTA DE PRIVACIDADDDDDD
+        this._router.navigate(['/home']);//RUTA DE PRIVACIDADDDDDD
       }
     }, ]
   });
@@ -154,7 +154,7 @@ cargar(){
 
 
 volverInicio(){
-  this._router.navigate(['/logout']);//OJO!AGREGAR AQUI LA RUTA DEL EDITAR PERFIIIIIIL
+  this._router.navigate(['/home']);//vuelve a home
 }
 
 
