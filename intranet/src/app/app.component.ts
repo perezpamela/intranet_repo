@@ -8,6 +8,8 @@ import {UsuarioDatosService} from './servicios/usuario-datos.service';
 
 import { Router } from '@angular/router'
 
+import { MenuController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-root',
@@ -21,6 +23,7 @@ export class AppComponent {
     private statusBar: StatusBar,
     private usuarioDatosService: UsuarioDatosService,
     private _router: Router,
+    public menu: MenuController,
   ) {
     this.initializeApp();
   }
@@ -38,7 +41,9 @@ export class AppComponent {
   }
 
   Perfil(){
-    this._router.navigate(['/perfil']);;
+    this._router.navigate(['/perfil']);
+    this.menu.close()
+
   }
 
   usuario:string = localStorage.getItem('usuario');

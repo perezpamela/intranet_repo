@@ -3,6 +3,8 @@ import { ActionSheetController, AlertController } from '@ionic/angular';
 import { Router } from '@angular/router'
 import { UsuarioDatosService } from '../servicios/usuario-datos.service';
 
+import { MenuController } from '@ionic/angular';
+
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.page.html',
@@ -17,12 +19,14 @@ export class PerfilPage implements OnInit {
     private usuarioDatosService: UsuarioDatosService,
     public actionSheetController: ActionSheetController,//inyectamos para usar action sheet
     private _router: Router,
+    public menu: MenuController,
     //private alertControl: AlertController
     ) { }
 
   ngOnInit(
     ) {    
       this.cargar();
+      this.menu.swipeGesture(false)
   }
 
 
