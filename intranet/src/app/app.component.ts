@@ -41,6 +41,6 @@ export class AppComponent {
     this._router.navigate(['/perfil']);;
   }
 
-
+  usuario:string = localStorage.getItem('usuario');
 
 }
