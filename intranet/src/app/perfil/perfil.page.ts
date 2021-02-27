@@ -126,20 +126,20 @@ cargar(){
   this.usuarioDatosService.traerComentarios(us).subscribe(u => {//us=desa1 localStorage
     let res= u["data"];
     //console.log("res= "+res)
-    
+    let com;
     
     let num=Object.keys(res).length;
+    
+    if(num>=1){
     var band=0;
-    let com=new Array(num-1);
+    com=new Array(num-1);
     var info;
-
     //var string = JSON.stringify(u);
     //console.log("stringu= "+string)
     //var comentario = JSON.parse(string);
     //console.log("comentario= "+comentario.comment_content)
 
     for (var i = 0 ; i< num ; i++) {
-
       if(res[i].comment_type=='Informacion'){
         info = res[i].comment_content;
         document.getElementById('infoLbl').innerHTML = info;
@@ -148,11 +148,21 @@ cargar(){
         com[band]=res[i];
         band++
       }
-   }
-   
+    }
 
-    this.comentarios = com;
+    if(band==0){
+      this.comentarios = [{comment_content:"Sin comentarios"}];
+    }
+    else{
+      this.comentarios = com;
+    }
+    }
+    else{
+      this.comentarios = [{comment_content:"Sin comentarios"}];
+    }
 
+    
+    
   })
 };
 
