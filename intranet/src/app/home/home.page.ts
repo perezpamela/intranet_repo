@@ -21,11 +21,12 @@ export class HomePage implements OnInit {
   usuario = localStorage.getItem('usuario');
   constructor(private menuCtrl: MenuController,
       	      private uService: UsuarioDatosService,
-              private router: Router) { 
+              private router: Router,
+              public menu: MenuController) { 
   }
   
   ngOnInit() {
-    
+    this.menu.swipeGesture(true)
   }
   logout(){
     this.uService.logoutUser();

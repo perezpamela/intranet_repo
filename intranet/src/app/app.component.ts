@@ -46,6 +46,11 @@ export class AppComponent {
 
   }
 
+  Clientes(){
+    this._router.navigate(['/clientes']);
+    this.menu.close()
+  }
+
   usuario:string = localStorage.getItem('usuario');
 
 }
