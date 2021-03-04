@@ -51,6 +51,26 @@ export class AppComponent {
     this.menu.close()
   }
 
+  Herramientas(){
+    this._router.navigate(['/herramientas']);
+    this.menu.close()
+  }
+
+  DatosUtiles(){
+    this._router.navigate(['/datos-utiles']);
+    this.menu.close()
+  }
+
+  Novedades(){
+    this._router.navigate(['/novedades']);
+    this.menu.close()
+  }
+
+  redesSociales(){
+    this._router.navigate(['/home']);//redirigirlo a la pagina de redes sociales!
+    this.menu.close()
+  }
+
   usuario:string = localStorage.getItem('usuario');
 
 }

@@ -32,6 +32,18 @@ const routes: Routes = [
     path: 'clientes',
     loadChildren: () => import('./clientes/clientes.module').then( m => m.ClientesPageModule)
   },
+  {
+    path: 'herramientas',
+    loadChildren: () => import('./herramientas/herramientas.module').then( m => m.HerramientasPageModule)
+  },
+  {
+    path: 'novedades',
+    loadChildren: () => import('./novedades/novedades.module').then( m => m.NovedadesPageModule)
+  },
+  {
+    path: 'datos-utiles',
+    loadChildren: () => import('./datos-utiles/datos-utiles.module').then( m => m.DatosUtilesPageModule)
+  },
 
 
   
