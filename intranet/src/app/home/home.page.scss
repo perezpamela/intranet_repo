@@ -1,0 +1,142 @@
+*{
+    padding:0px;
+    margin: 0px;
+    text-align: center;
+}
+ 
+ 
+  ion-slides{
+    height: 100%;
+    width: 100%;
+    ion-slide{
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+      }
+  }
+  
+  
+ion-item{
+    --ion-background-color:transparent;
+}
+ 
+ion-title{
+    margin: 1rem 1rem;
+}
+ 
+ 
+ion-item#dicsyanos{
+    
+    margin-top: 3rem;
+    --ion-background-color: transparent;
+    background-image: linear-gradient(0deg, #20B2ED 36%, #FFFFFF 100%);
+    width: 100%;
+    ion-title{
+        color:whitesmoke;
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    ion-avatar{
+        width: 70px;
+        height: 70px;
+        display: block;
+    }
+}
+ 
+ 
+//cards menu enlaces rapidos----------------------------------------
+ion-card.menu{
+    --ion-background-color:transparent;
+    width: 80%;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-top:2px;
+    margin-bottom: 2px;
+    height: 5rem;
+}
+ion-card#formacion{
+    --ion-background-color: #84C4F0; 
+    img{
+    width: 20%;
+    height: 15vw;
+    object-fit: contain;
+    }
+}
+ 
+ion-card#normas{
+    --ion-background-color:#75AD40;
+    img{
+    width: 20%;
+    height: 15vw;
+    object-fit: contain;
+    }  
+}
+ 
+ion-card#logros{
+    --ion-background-color: #0075BB;
+    img{
+    width: 20%;
+    height: 15vw;
+    object-fit: contain;
+    }
+}
+ion-card#beneficios{
+    --ion-background-color: #F2CB13;
+    img{
+        width: 20%;
+        height: 15vw;
+        object-fit: contain;
+    }
+}
+ 
+ion-card#referidos{
+    --ion-background-color: #E3A51A;
+    img{
+        width: 20%;
+        height: 15vw;
+        object-fit: contain;
+    }
+}
+ 
+ion-card#estructura{
+    --ion-background-color: #831F82;
+    img{
+        width: 20%;
+        height: 15vw;
+        object-fit: contain;
+    }
+}
+ 
+ion-card#innovacion{
+    --ion-background-color: #CA4F1C;
+    img{
+        width: 20%;
+        height: 15vw;
+        object-fit: contain;
+    }
+}
+ion-card#procesos{
+    --ion-background-color: #75AD40;
+    img{
+        width: 20%;
+        height: 15vw;
+        object-fit: contain;
+    }
+}
+ 
+h6{
+    color: white;
+}
+#footer{
+    --ion-background-color:#84C4F0; //a esto no le da bola
+    ion-icon{
+        font-size: 1.5rem;
+    }
+    ion-item{
+        padding-top:1.5rem;
+    }
+    h6{
+        padding:2px;
+        font-style: italic;
+    }
+}

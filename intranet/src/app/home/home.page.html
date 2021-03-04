@@ -1,0 +1,178 @@
+
+ 
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+    
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+      <!-- el atributo  menu="main-menu"   apunta al menu deseado....SE OMITE SI SOLO HAY UN MENU WE (el mismo main-menu en el hhtplogout) -->
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+ 
+
+
+
+
+<ion-content>
+
+  <ion-list lines="none">
+    <ion-title>Novedades</ion-title>
+    <ion-item>
+      <ion-slides id="novedades-slides" pager="true" [options]="slideOpts">
+        <ion-slide>
+          <ion-card>
+            <img src="https://i.pinimg.com/originals/59/54/b4/5954b408c66525ad932faa693a647e3f.jpg">
+            <ion-card-header>
+              <ion-card-title>¡Compremos YA!</ion-card-title>
+              <ion-card-subtitle>Nos solidarizamos con la crisis.</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+    
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="https://i.pinimg.com/originals/59/54/b4/5954b408c66525ad932faa693a647e3f.jpg">
+            <ion-card-header>
+              <ion-card-title>Mateada virtual</ion-card-title>
+              <ion-card-subtitle>25 de mayo. ¡Te esperamos!</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="https://i.pinimg.com/originals/59/54/b4/5954b408c66525ad932faa693a647e3f.jpg">
+            <ion-card-header>
+              <ion-card-title>Nuestras oficinas</ion-card-title>
+              <ion-card-subtitle>Sede Córdoba</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-item><!-- fin seccion novedades-->
+ 
+<ion-title>Enlaces Rápidos</ion-title>
+<ion-grid>
+  <ion-row>
+    <ion-col size=6>
+        <!-- formacion-->
+        <ion-card class="menu" id="formacion">
+          <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Formacion.png">
+          <h6>Formación</h6>
+        </ion-card>
+    </ion-col>
+    <ion-col size=6>
+      <!-- normas-->
+      <ion-card class="menu" id="normas">
+        <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Politicas-y-condiciones.png">
+        <h6>Normas</h6>
+      </ion-card>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size=6>
+        <!-- logros-->
+        <ion-card class="menu" id="logros">
+          <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Logros.png">
+          <h6>Logros</h6>
+        </ion-card>
+    </ion-col>
+    <ion-col size=6>
+      <!-- beneficios-->
+      <ion-card class="menu" id="beneficios">
+        <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Beneficios.png">
+        <h6>Beneficios</h6>
+      </ion-card>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size=6>
+        <!-- referidos-->
+        <ion-card class="menu"  id="referidos">
+          <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Referidos.png">
+          <h6>Referidos</h6>
+        </ion-card>
+    </ion-col>
+    <ion-col size=6>
+      <!-- estructura dicsys-->
+      <ion-card class="menu" id="estructura">
+        <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Estructura.png">
+        <h6>Estructura Dicsys</h6>
+      </ion-card>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size=6>
+        <!-- innovación-->
+        <ion-card class="menu" id="innovacion" >
+          <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Innovacion.png">
+          <h6>Innovación</h6>
+        </ion-card>
+    </ion-col>
+    <ion-col size=6>
+      <!-- procesos organizacionales-->
+      <ion-card class="menu" id="procesos">
+        <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Procesos-Organizacionales.png">
+        <h6>Procesos org.</h6>
+      </ion-card>
+  </ion-col>
+  </ion-row>
+</ion-grid>
+ 
+<ion-item id="dicsyanos" routerLink="/login" >
+  <ion-list lines="none">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/06/y11-150x150.png">
+      </ion-avatar>
+    </ion-item>
+    <ion-title><ion-label>Dicsyanos</ion-label></ion-title>
+    <ion-item>
+      <ion-avatar slot="end">
+        <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/06/ava4-350x350.png">
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+</ion-item> <!--fin sección dicsyanos-->
+ 
+ <!--
+<ion-item id="noticias">
+  Noticias
+</ion-item> fin sección enlaces noticias-->
+ 
+ 
+  </ion-list>
+        
+<ion-footer id="footer">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <ion-item lines="none">
+          <a href="https://www.facebook.com/DicsysSA/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-item lines="none">
+          <a href="https://www.instagram.com/dicsys_sa" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-item lines="none">
+          <a href="https://www.twitter.com/dicsys_sa" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-item lines="none">
+         <a href="https://www.linkedin.com/company/somosdicsys" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12"><h6>&#169; Dicsys 2021</h6></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
+</ion-content>

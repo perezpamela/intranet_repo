@@ -6,6 +6,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import {UsuarioDatosService} from './servicios/usuario-datos.service';
 
+import { Router } from '@angular/router'
+
+import { MenuController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-root',
@@ -17,7 +21,9 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private usuarioDatosService: UsuarioDatosService
+    private usuarioDatosService: UsuarioDatosService,
+    private _router: Router,
+    public menu: MenuController,
   ) {
     this.initializeApp();
   }
@@ -34,6 +40,17 @@ export class AppComponent {
     this.usuarioDatosService.logoutUser();
   }
 
+  Perfil(){
+    this._router.navigate(['/perfil']);
+    this.menu.close()
 
+  }
+
+  Clientes(){
+    this._router.navigate(['/clientes']);
+    this.menu.close()
+  }
+
+  usuario:string = localStorage.getItem('usuario');
 
 }

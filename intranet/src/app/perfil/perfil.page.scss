@@ -1,0 +1,110 @@
+//para el perfil---->
+.body {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: Arial;
+  color: rgba(255, 255, 255, 1)
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    //width: 40%;
+    margin-top: -10%;
+    width: 30%;
+    height: 30%;
+  }
+
+  .nombreUsuario {
+   margin-left: 25px;
+   margin-top: 25px;
+   font-size: large;
+  }
+
+  .img2 {
+    display: block;
+    //margin-left: 10%;
+   // margin-right: 10%;
+    width: 100%;
+    margin-top: 10%;
+  }
+  
+  .img4 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .button{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .overflow{
+      height: 200px;
+    overflow: hidden;
+  }
+  
+  .fondologin{
+    --ion-background-color:#6fc2c8
+  }
+  
+  //.fondoitem{ 
+   // --background: rgba(0,0,0,0);
+    //--border-color: rgba(0,0,0,0);
+    //display: block;
+    //margin-top: -50%;
+    //margin-left: 5%;
+  //}
+  
+  .asd{
+    .select-icon {
+      .select-icon-inner {
+         color : rgba(0,0,0,0) !important;
+      }
+    }
+  }
+  
+  ion-slides{
+   // background-color: rgba(0,0,0,0); NO FUNCIONA
+      width: 100%;   
+      
+  }
+
+
+/*
+  .slide{
+    color: rgba(255, 255, 255, 1);
+      //background-color: rgba(0,0,0,0); 
+      opacity: 0.3;
+      width: 500px;
+      height: 300px;
+  }*/
+  
+  ion-card{
+    --ion-background-color:#447778;
+      color: rgba(255, 255, 255, 1);
+      //overflow: unset !important;
+      opacity: 0.8;
+      width: 300px;
+      height: 200px;
+  }
+
+  .my-custom-class {
+    --ion-background-color:#323232;
+    background: #323232;
+    --background-color: rgba(0,0,0,0); 
+    --background: #323232;
+    --button-background: #323232;
+  }
+
+  ion-card-head{
+
+      color: rgba(255, 255, 255, 1);
+
+  }
+  
+
+  .titulo {
+    font-size: large;
+  }

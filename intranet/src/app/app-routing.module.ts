@@ -20,6 +20,20 @@ const routes: Routes = [
     loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
     
   },
+  {
+    path: 'perfil',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'clientes',
+    loadChildren: () => import('./clientes/clientes.module').then( m => m.ClientesPageModule)
+  },
+
+
   
 
 

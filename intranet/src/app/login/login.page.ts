@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioDatosService } from '../servicios/usuario-datos.service';
 import { MenuController } from '@ionic/angular';
 
+import { Router } from '@angular/router'
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -22,7 +24,8 @@ export class LoginPage implements OnInit {
 
   constructor(
     private usuarioDatosService: UsuarioDatosService,
-    public menu: MenuController
+    public menu: MenuController,
+    private _router: Router
   ) { 
     this.menu.swipeGesture(false)
   }
@@ -31,6 +34,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     localStorage.removeItem('token')//remover cualquier rastro de un token
+    localStorage.removeItem('usuario')//remover cualquier rastro de un token
   }
 
   /*CheckeoPass(pass:string, input:string){
@@ -39,7 +43,7 @@ export class LoginPage implements OnInit {
 
   Login(){
 
-    let loginUserData = {mail:this.mail,pass:this.pass}//el email y la password del input
+    let loginUserData = {mail:this.mail,pass:this.pass}//el email y la password del input 
 
     //if(usuario.includes('@')){
       this.usuarioDatosService.login(loginUserData)//le paso una data (el usuario y contraseña) para que este pase esa data al http de la api
@@ -64,13 +68,16 @@ export class LoginPage implements OnInit {
       }*/
       alert("Contraseña ok ");
       localStorage.setItem('token', res.token) // T lallave es el npmbre 'token', el otro valor es el TOKEN que devuelve la api
+      localStorage.setItem('usuario',this.mail )
        // this._router.navigate(['/special'])//SOLO ES LA NAVEGACION A LA PAGINA DE INICIO
-       var asd=localStorage.getItem('token');
-       console.log(asd)
+      // var asd=localStorage.getItem('token');
+      // console.log(asd)
+      this._router.navigate(['/home']);
+
       },
       err => {
-        console.log(err)
-        alert(err.error);
+        //console.log(err)
+        alert(err.error.text);
       }
     )
    // }
