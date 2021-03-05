@@ -24,7 +24,8 @@ const routes: Routes = [
     path: 'perfil',
     canActivate: [AuthGuard],
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
-  },  {
+  },
+  {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
