@@ -1,4 +1,9 @@
 *{text-align: center;}
+@media only screen and (max-width: 300px) {
+    * {
+      font-size: medium;
+    }  
+  }
 section{
     padding:1rem 0; 
     ion-title{

@@ -19,9 +19,9 @@
     </section>
 
     <section id="menu-interno">
-      <ion-button id="btn-h-gestion" (click)="scrollToGestion()" expand="block">Herramientas de Gestión</ion-button>
-      <ion-button id="btn-h-publicas" (click)="scrollToPublicas()" expand="block">Herramientas Públicas</ion-button>
-      <ion-button id="btn-h-administrativas" (click)="scrollToAdministrativas()" expand="block">Herramientas Administrativas</ion-button>
+      <ion-button id="btn-h-gestion" (click)="ScrollToPoint('h-gestion')" expand="block">Herramientas de Gestión</ion-button>
+      <ion-button id="btn-h-publicas" (click)="ScrollToPoint('h-publicas')"  expand="block">Herramientas Públicas</ion-button>
+      <ion-button id="btn-h-administrativas" (click)="ScrollToPoint('h-administrativas')" expand="block">Herramientas Administrativas</ion-button>
     </section>
 
     <section id="h-gestion">
@@ -180,7 +180,7 @@
 
 
       <ion-footer id="footer">
-        <ion-grid>
+        <ion-grid  id="target">
           <ion-row>
             <ion-col size="3">
               <ion-item lines="none">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { IonContent } from '@ionic/angular';
 
 @Component({
@@ -8,32 +8,37 @@ import { IonContent } from '@ionic/angular';
   
 })
 export class HerramientasPage implements OnInit {
+  @ViewChild(IonContent, {static: false}) content: IonContent;  
   
-  constructor(private content: IonContent) { }
 
   ngOnInit() {
   }
-  gestionOffSet:any;
-  administrativasOffSet:any;
-  publicasOffSet:any;
+  gestion:any = null;
+  administrativas:any = null;
+  publicas:any = null;
   ionViewDidEnter(){
-    //this.gestionOffSet=document.getElementById('h-gestion').offsetTop;
-    //this.administrativasOffSet=document.getElementById('h-administrativas').offsetTop;
-    //this.publicasOffSet=document.getElementById('h-publicas').offsetTop;
+    
+    this.gestion = document.getElementById('h-gestion').offsetTop;
+    this.administrativas = document.getElementById('h-administrativas').offsetTop;
+    this.publicas = document.getElementById('h-publicas').offsetTop;
+    
   }
   
-  /*
-  scrollToGestion() { 
-    this.content.scrollToPoint(0, this.gestionOffSet); 
-  }
-  scrollToAdministrativas() { 
-    this.content.scrollToPoint(0, this.administrativasOffSet); 
-  }
-  scrollToPublicas() { 
-    this.content.scrollToPoint(0, this.publicasOffSet); 
-  } */
+ 
+  ScrollToPoint(x:string) {  
+    if(x=='h-gestion'){
+      this.content.scrollToPoint(0, this.gestion, 1500);  
+    } 
+    if(x=='h-administrativas'){
+      this.content.scrollToPoint(0, this.administrativas, 1500);
+    }
+    if(x=='h-publicas'){
+      this.content.scrollToPoint(0, this.publicas, 1500);
+    }
     
-      
+    
+  }  
+    
     
     
     
