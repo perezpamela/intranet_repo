@@ -1,0 +1,61 @@
+ 
+ 
+h4, h3, h2{
+    text-align: center;
+    padding: 2px;
+  }
+   
+   
+  #img-titulo{ 
+    margin:0;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/contenido-para-SEO.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 9rem;
+    width: 100%;
+    text-align: center;
+    h2{
+      color: white;
+      font-size: 1.1rem;
+      position:absolute;
+      padding:1rem;   
+    }
+    
+   
+   
+  }
+   
+  section{
+    border-bottom: 2px solid lightblue;
+    padding-bottom: 1rem;;
+    text-align: justify;
+    margin: 1rem;
+    
+    img{
+      width: 100%;
+    }
+    
+    
+  }
+  section#ubicacion{
+   
+  padding: 0;
+    border: none;
+    ion-card{
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+      ion-card-title{
+        padding: 2px;
+        font-size: medium;
+      }
+    }
+  }
+  #footer{
+    text-align: center;
+  }
+   
+   
+  

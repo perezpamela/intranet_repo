@@ -1,0 +1,74 @@
+*{text-align: center;}
+@media only screen and (max-width: 300px) {
+    * {
+      font-size: medium;
+    }  
+  }
+section{
+    padding:1rem 0; 
+    ion-title{
+        margin-top:1.5rem;
+    }
+}
+#img-titulo{ 
+    margin:0;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/omnicanalidad-wal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 8rem;
+    width: 100%;
+    text-align: center;
+    h2{
+      color: white;
+      font-size: 1.8rem;
+      position:absolute;
+      padding:1rem;   
+      text-align: center;
+    } 
+  }
+
+  section#menu-interno{
+      ion-button{
+          margin: 0.5rem 0;
+          font-size: small;
+      }
+      #btn-h-gestion{
+        --background: #75AD40;
+      }
+      #btn-h-publicas{
+        --background: #CA4F1C;
+      }
+      #btn-h-administrativas{
+        --background: #3B5998;
+      }
+  }
+
+  
+  i{
+      font-size: 50px;
+      color: #4054b2;
+      border: 0.5rem solid #4054b2;
+      padding: 1rem;
+      border-radius: 50%;
+  }
+  ion-card{
+      text-align: center;
+  }
+  #footer{
+    text-align: center;
+    ion-icon{
+        font-size: 1.5rem;
+    }
+    ion-item{
+        padding-top:1.5rem;
+    }
+    h6{
+        padding:2px;
+        font-style: italic;
+    }
+}
+ion-card{
+    width: 100%;
+}

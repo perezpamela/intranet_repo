@@ -1,0 +1,147 @@
+<ion-content [scrollEvents]="true" class="fondologin">
+
+  <ion-header >
+    <ion-item color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+        <!-- el atributo  menu="main-menu"   apunta al menu deseado....SE OMITE SI SOLO HAY UN MENU WE (el mismo main-menu en el hhtplogout) -->
+      </ion-buttons>
+      <ion-title >Datos Utiles</ion-title>
+    </ion-item>
+  </ion-header>
+
+
+
+  <div class="body">
+    <section id="img-titulo">
+      <h2>Encontrá aquí información vinculada a
+        gestiones que tengan que ver con ART, Bancos y Cobertura Médica.</h2>
+    </section>
+     
+    <section id="cobertura-medica">
+      <h3>Nuestra Cobertura Médica.</h3>
+      <div id="Omint">
+       <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Omint-230x112.png">
+       <label>Cuando hablamos de los grandes referentes de medicina prepaga en la Argentina
+      no podemos dejar de mencionar a la empresa Omint.
+      Su larga trayectoria, volumen de prestadores y asociados y niveles
+      de satisfacción, posicionan a la prepaga Omint como una de las top 5
+      del país.
+      </label>
+      </div>
+      <div id="Swiss">
+        <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/swiss-medical-asistencia-al-viajero-1-230x131.png">
+        <label>Swiss Medical Group es uno de los principales grupos empresarios de Argentina que se dedica
+      a la protección de personas y es líder en el mercado de la salud.</label>
+      </div>
+     
+    </section>
+    <section id="aseguradora">
+      <h3>Aseguradora de Riesgos de Trabajo</h3>
+    <div id="grupo-provincia">
+      <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/descarga-1.png">
+      <label>Trabajamos para proteger el trabajo de los otros, respaldando a las empresas, los organismos y las instituciones
+         que hacen al crecimiento de nuestro país. Somos la Aseguradora de Riesgos del Trabajo del Grupo Provincia, n° 1 de la 
+         Provincia de Buenos Aires y una de las más importantes de la Argentina.</label>
+    </div>
+    <div id="banco-galicia">
+      <h3>Bancos</h3>
+      <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/1b049bdf3f9b91ad63215c1480ef06be-830x286.jpg">
+      <label>Somos uno de los bancos líderes del mercado argentino. Siempre nos destacamos por estar cerca de nuestros clientes y comprometidos
+         con el desarrollo sustentable de la Argentina. Ofrecemos productos y servicios de calidad buscando constantemente propuestas innovadoras
+         para lograr una mayor satisfacción de nuestros clientes.</label>
+    </div>
+     
+    </section>
+    <section id="contactos">
+     <ion-title>Contactos</ion-title>
+     <ion-list>
+        <ion-item detail="true" href="mailto:rrhh@dicsys.com"><h5>rrhh@dicsys.com</h5></ion-item>
+        <ion-item detail="true" href="mailto:seleccion@dicsys.com"><h5>seleccion@dicsys.com</h5></ion-item>
+        <ion-item detail="true" href="mailto:sistemas@dicsys.com"><h5>sistemas@dicsys.com</h5></ion-item>
+        <ion-item detail="true" href="mailto:directores@dicsys.com"><h5>directores@dicsys.com</h5></ion-item>
+     </ion-list>
+    </section>
+     
+    <section id="ubicacion">
+      <ion-title>Ubicación</ion-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col size=12>
+            <ion-item lines="none" (click)="setDireccion()">
+              <ion-card>
+                <ion-card-title>
+                  Av. Hipólito Yrigoyen 146, 1º Piso Nueva Córdoba, Córdoba.
+                </ion-card-title>
+                <ion-card-content>
+                  +54 351 569 1050
+                </ion-card-content>
+              </ion-card>
+              
+            </ion-item>
+            <ion-item lines="none" (click)="setDireccion()">
+              <ion-card>
+                <ion-card-title>
+                  Av. Alicia M. de Justo 1080, 3º Piso Puerto Madero, Buenos Aires.
+                </ion-card-title>
+                <ion-card-content>
+                  +54 11 5031 9518
+                </ion-card-content>
+              </ion-card>
+            </ion-item>
+     
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size=12>
+            <iframe width="100%" height="100%" id="gmap_canvas" 
+            src="https://maps.google.com/maps?q=Av.%20Hip%C3%B3lito%20Yrigoyen%20146,%201%C2%BA%20Piso%20Nueva%20C%C3%B3rdoba,%20C%C3%B3rdoba.&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item>  
+      </ion-item>
+    </section>
+     
+     
+    <ion-footer id="footer">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-item lines="none">
+              <a href="https://www.facebook.com/DicsysSA/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            </ion-item>
+          </ion-col>
+          <ion-col size="3">
+            <ion-item lines="none">
+              <a href="https://www.instagram.com/dicsys_sa" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            </ion-item>
+          </ion-col>
+          <ion-col size="3">
+            <ion-item lines="none">
+              <a href="https://www.twitter.com/dicsys_sa" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            </ion-item>
+          </ion-col>
+          <ion-col size="3">
+            <ion-item lines="none">
+             <a href="https://www.linkedin.com/company/somosdicsys" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12"><h6>&#169; Dicsys 2021</h6></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-footer>
+   
+     
+     
+    
+
+
+
+
+
+  </div>
+</ion-content>

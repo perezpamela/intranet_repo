@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AuthGuard } from './auth.guard';//importar AuthGuard 
 
+import { IonContent } from '@ionic/angular';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -19,6 +21,7 @@ import { AuthGuard } from './auth.guard';//importar AuthGuard
   providers: [
     StatusBar,
     SplashScreen,
+    IonContent,
     AuthGuard,//agregar AuthGuard 
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
