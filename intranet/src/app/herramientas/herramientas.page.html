@@ -23,15 +23,16 @@
     <section>
       <ion-list>
         
-        <div padding   class="fondoL" style="border-style: groove;" >
+        <div padding style="border-style: groove;" >
           
-          <ion-item-divider  (click)="show1=!show1" style="height: 50px;">
+          <ion-item-divider class="fondoL" (click)="show1=!show1" style="height: 50px;">
             <p class="fondoL" >Herramientas de Gestión</p>
           </ion-item-divider>
         
           <ion-item *ngIf="show1">
             <div >
-              <div id="bugGenie">
+
+              <div >
                 <ion-item lines="none" href="http://190.210.221.15:8081/login">
                   <ion-card>
                     <i class="fas fa-bug"></i>
@@ -42,6 +43,8 @@
                   </ion-card>
                 </ion-item>
               </div>
+
+
               <div id="ticketsIt">
                 <ion-item lines="none" href="http://190.210.221.15:9500/intranet/?page_id=980">
                   <ion-card>
@@ -80,10 +83,10 @@
         </div>
 
 
-        <div padding   class="fondoL" style="border-style: groove;">
+        <div padding style="border-style: groove;">
           
-          <ion-item-divider class="fondoL"  (click)="show2=!show2" style="height: 50px;">
-            <p class="fondoL" >Herramientas Administrativas</p>
+          <ion-item-divider class="fondoM"  (click)="show2=!show2" style="height: 50px;">
+            <p class="fondoM" >Herramientas Administrativas</p>
           </ion-item-divider>
         
           <ion-item *ngIf="show2">
@@ -142,13 +145,10 @@
         </div>
 
 
-
-
-
-        <div padding  class="fondoL" style="border-style: groove;">
+        <div padding  style="border-style: groove;">
           
-          <ion-item-divider class="fondoL"  (click)="show3=!show3" style="height: 50px;">
-            <p class="fondoL" >Herramientas Públicas</p>
+          <ion-item-divider class="fondoN"  (click)="show3=!show3" style="height: 50px;">
+            <p class="fondoN" >Herramientas Públicas</p>
           </ion-item-divider>
         
           <ion-item *ngIf="show3">
@@ -238,51 +238,53 @@
     
   </div>
 
-    <ion-footer >
-      <ion-grid>
-        <ion-row>
-          
-          <ion-col size="3" class="columnaFooter" >
-            <ion-item lines="none">
-              <a href="https://www.facebook.com/DicsysSA/" target="_blank" ><ion-icon name="logo-facebook"></ion-icon></a>
-            </ion-item>
-          </ion-col>
+  
+  
 
-          <ion-col size="3"  class="columnaFooter">
-            <ion-item lines="none">
-              <a href="https://www.instagram.com/dicsys_sa" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
-            </ion-item>
-          </ion-col>
+  <div style="height: 100px;"></div>
+  <ion-footer style="background-color:#ffffff;
+  position:fixed;
 
-          <ion-col size="3"  class="columnaFooter">
-            <ion-item lines="none">
-              <a href="https://www.twitter.com/dicsys_sa" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
-            </ion-item>
-          </ion-col>
+  left:0;
+  bottom:0;
+  width:100%">
+    <ion-grid>
+      <ion-row>
+        
+        <ion-col size="3" class="columnaFooter" >
+          <ion-item lines="none">
+            <a href="https://www.facebook.com/DicsysSA/" target="_blank" ><ion-icon name="logo-facebook"></ion-icon></a>
+          </ion-item>
+        </ion-col>
 
-          <ion-col size="3"  class="columnaFooter">
-            <ion-item lines="none">
-             <a href="https://www.linkedin.com/company/somosdicsys" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
-            </ion-item>
-          </ion-col>
+        <ion-col size="3"  class="columnaFooter">
+          <ion-item lines="none">
+            <a href="https://www.instagram.com/dicsys_sa" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+          </ion-item>
+        </ion-col>
 
-        </ion-row>
-        <center>
-          <img 
-          src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png" 
-          srcset="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png 258w, http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS-230x58.png 230w" 
-          align="center"
-          style="height: 20px;">
-        </center>
-      </ion-grid>
-    </ion-footer>
+        <ion-col size="3"  class="columnaFooter">
+          <ion-item lines="none">
+            <a href="https://www.twitter.com/dicsys_sa" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+          </ion-item>
+        </ion-col>
 
+        <ion-col size="3"  class="columnaFooter">
+          <ion-item lines="none">
+           <a href="https://www.linkedin.com/company/somosdicsys" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </ion-item>
+        </ion-col>
 
-   
-    
-
-
-
+      </ion-row>
+      <center>
+        <img 
+        src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png" 
+        srcset="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png 258w, http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS-230x58.png 230w" 
+        align="center"
+        style="height: 20px;">
+      </center>
+    </ion-grid>
+  </ion-footer>
 
 
 </ion-content>

@@ -30,8 +30,6 @@ export class RedesSocialesPage implements OnInit,AfterViewInit {
     }
   }
 
-  volverInicio(){
-    this._router.navigate(['/home']);//vuelve a home
-  }
+ 
 
 }
