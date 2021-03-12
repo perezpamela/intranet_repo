@@ -3,7 +3,7 @@
     display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 200px;
+  height: 100px;
   }
   
   
@@ -13,7 +13,7 @@
     display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 250px;
+  width: 150px;
   }
   
   .paginaCliente {
@@ -28,4 +28,29 @@
     margin-right: 0%;
     font-family: Arial;
   
+  }
+
+  .Ionitems{
+    min-height: 150px;
+    margin: 0px;
+    text-align: center;
+    margin: 0 auto;
+    
+    display: flex!important; 
+     align-content: center!important;
+     align-items: center!important;
+  }
+
+  ion-label{
+    color: #4b4b4b
+  }
+
+
+  .columnaFooter{
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
   }

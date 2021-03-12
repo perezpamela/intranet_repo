@@ -1,10 +1,10 @@
-*{
-    padding:0px;
+.t{
+    padding: 0px;
     margin: 0px;
     text-align: center;
 }
  
- 
+
   ion-slides{
     height: 100%;
     width: 100%;
@@ -20,27 +20,29 @@ ion-item{
     --ion-background-color:transparent;
 }
  
-ion-title{
+
+
+.Iontitulos {
     margin: 1rem 1rem;
-}
+    
+   }
  
  
 ion-item#dicsyanos{
     
-    margin-top: 3rem;
+    margin-top: 2rem;
     --ion-background-color: transparent;
     background-image: linear-gradient(0deg, #20B2ED 36%, #FFFFFF 100%);
-    width: 100%;
+    margin-left:5%;
+    margin-right: 5%;
+    height: 100px;
+    
     ion-title{
         color:whitesmoke;
         font-size: 2rem;
-        margin-left: 1rem;
+        
     }
-    ion-avatar{
-        width: 70px;
-        height: 70px;
-        display: block;
-    }
+    
 }
  
  
@@ -54,6 +56,14 @@ ion-card.menu{
     margin-bottom: 2px;
     height: 5rem;
 }
+
+.menux{
+    margin-top:2px;
+    margin-bottom: 2px;
+}
+
+
+
 ion-card#formacion{
     --ion-background-color: #84C4F0; 
     img{
@@ -127,16 +137,13 @@ ion-card#procesos{
 h6{
     color: white;
 }
-#footer{
-    --ion-background-color:#84C4F0; //a esto no le da bola
-    ion-icon{
-        font-size: 1.5rem;
-    }
-    ion-item{
-        padding-top:1.5rem;
-    }
-    h6{
-        padding:2px;
-        font-style: italic;
-    }
+
+
+.columnaFooter{
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }

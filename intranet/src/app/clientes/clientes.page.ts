@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
+//import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-clientes',
@@ -8,14 +8,15 @@ import { Router } from '@angular/router'
 })
 export class ClientesPage implements OnInit {
 
-  constructor(  private _router: Router,) { }
+  constructor( // private _router: Router,
+    ) { }
 
   ngOnInit() {
   }
 
-
+/*
   volverInicio(){
     this._router.navigate(['/home']);//vuelve a home
-  }
+  }*/
 
 }

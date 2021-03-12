@@ -1,0 +1,9 @@
+arrayDatos: Array<{: string, : string, : string, showDetails: boolean}> = [];
+
+{
+    "titulo": "Torta de Chocolate",
+    "detalle": "Jorge Torres Prado",
+    "icon": "Buena",
+    "azucar": "Stevia",
+    "tamaño": "mediano"
+  }

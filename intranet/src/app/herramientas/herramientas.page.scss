@@ -1,15 +1,18 @@
-*{text-align: center;}
+
+
 @media only screen and (max-width: 300px) {
     * {
       font-size: medium;
     }  
   }
+
 section{
     padding:1rem 0; 
     ion-title{
         margin-top:1.5rem;
     }
 }
+
 #img-titulo{ 
     margin:0;
     position: relative;
@@ -28,24 +31,7 @@ section{
       text-align: center;
     } 
   }
-
-  section#menu-interno{
-      ion-button{
-          margin: 0.5rem 0;
-          font-size: small;
-      }
-      #btn-h-gestion{
-        --background: #75AD40;
-      }
-      #btn-h-publicas{
-        --background: #CA4F1C;
-      }
-      #btn-h-administrativas{
-        --background: #3B5998;
-      }
-  }
-
-  
+ 
   i{
       font-size: 50px;
       color: #4054b2;
@@ -71,4 +57,31 @@ section{
 }
 ion-card{
     width: 100%;
+}
+
+
+.columnaFooter{
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.centrado{
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: Arial;
+}
+
+
+.fondoL{
+  --ion-background-color:#C9C3C3;
+  color:#000000;
+  text-align:center;font-size: 20px; margin:auto;
+}
+
+.showingData{
+  display:none;
 }
