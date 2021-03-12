@@ -67,7 +67,7 @@ export class AppComponent {
   }
 
   redesSociales(){
-    this._router.navigate(['/home']);//redirigirlo a la pagina de redes sociales!
+    this._router.navigate(['/redes-sociales']);//redirigirlo a la pagina de redes sociales!
     this.menu.close()
   }
 

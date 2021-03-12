@@ -45,6 +45,10 @@ const routes: Routes = [
     path: 'datos-utiles',
     loadChildren: () => import('./datos-utiles/datos-utiles.module').then( m => m.DatosUtilesPageModule)
   },
+  {
+    path: 'redes-sociales',
+    loadChildren: () => import('./redes-sociales/redes-sociales.module').then( m => m.RedesSocialesPageModule)
+  },
 
 
   
