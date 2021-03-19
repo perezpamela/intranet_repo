@@ -1,241 +1,268 @@
 <ion-content [scrollEvents]="true" >
 
   <ion-header >
-    <ion-item color="primary" >
-  
-      <ion-buttons slot="start">
-        <ion-menu-button menu="main-menu" ></ion-menu-button><!-- el atributo  menu="main-menu"   apunta al menu deseado....SE OMITE SI SOLO HAY UN MENU WE (el mismo main-menu en el hhtplogout) -->
+    <ion-item style="--ion-background-color:#FFF000; box-shadow: 0px 10px 10px rgba(177, 177, 177, 0.5); color:#000000">
+      <ion-buttons slot="start" >
+        <ion-button (click)="tMenu()">
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+        <!-- el atributo  menu="main-menu"   apunta al menu deseado....SE OMITE SI SOLO HAY UN MENU WE (el mismo main-menu en el hhtplogout) -->
       </ion-buttons>
-
       <ion-title >Herramientas</ion-title>
-  
+
+      <ion-icon name="home" (click)="volverInicio()" style="color:#000000"> </ion-icon>
     </ion-item>
   </ion-header>
 
 
-
-  <div class="centrado">
-
-    <section id="img-titulo" >
-      <h2 style="text-align:center;">Herramientas Corporativas</h2> 
-    </section>
-
-    <section>
-      <ion-list>
-        
-        <div padding style="border-style: groove;" >
-          
-          <ion-item-divider class="fondoL" (click)="show1=!show1" style="height: 50px;">
-            <p class="fondoL" >Herramientas de Gestión</p>
-          </ion-item-divider>
-        
-          <ion-item *ngIf="show1">
-            <div >
-
-              <div >
-                <ion-item lines="none" href="http://190.210.221.15:8081/login">
-                  <ion-card>
-                    <i class="fas fa-bug"></i>
-                    <ion-card-header>
-                      <ion-card-title>Bug Genie</ion-card-title>
-                      <ion-card-subtitle>Seguimiento de la gestión de proyectos.</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item>
-              </div>
-
-
-              <div id="ticketsIt">
-                <ion-item lines="none" href="http://190.210.221.15:9500/intranet/?page_id=980">
-                  <ion-card>
-                    <i class="fas fa-laptop"></i>
-                    <ion-card-header>
-                      <ion-card-title>Tickets IT</ion-card-title>
-                      <ion-card-subtitle>Sistema de tickets para la solicitud de soporte técnico.</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item>
-              </div>
-              <div id="reservaSalas">
-                <ion-item lines="none" href="http://190.210.221.15:9500/intranet/?page_id=1170">
-                  <ion-card>
-                    <i class="fas fa-calendar-check"></i>
-                    <ion-card-header>
-                      <ion-card-title>Reserva de Salas</ion-card-title>
-                      <ion-card-subtitle>Sistema que permite gestionar la reserva de salas en Dicsys.</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item>
-              </div>
-              <div id="email">
-                <ion-item lines="none" href="http://webmail.dicsys.com/">
-                  <ion-card>
-                    <i class="fas fa-envelope-open-text"></i>
-                    <ion-card-header>
-                      <ion-card-title>E-Mail</ion-card-title>
-                      <ion-card-subtitle>Sistema de acceso al correo electrónico corporativo.</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item>
-              </div>
-            </div>
-          </ion-item>
-        </div>
-
-
-        <div padding style="border-style: groove;">
-          
-          <ion-item-divider class="fondoM"  (click)="show2=!show2" style="height: 50px;">
-            <p class="fondoM" >Herramientas Administrativas</p>
-          </ion-item-divider>
-        
-          <ion-item *ngIf="show2">
-
-            <div >
-              
-              <div>
-                <ion-item lines="none" href="http://190.210.221.15:8000/MicroStrategy/asp/Main.aspx?evt=3001&src=Main.aspx.3001&Port=0&">
-                  <ion-card>
-                    <i class="fas fa-chart-bar"></i>
-                    <ion-card-header>
-                      <ion-card-title>Microstrategy</ion-card-title>
-                      <ion-card-subtitle>Software de inteligencia empresarial.</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item>
-              </div>
-              <div>
-                <ion-item lines="none">
-                  <ion-card>
-                    <i class="fas fa-cloud"></i>
-                    <ion-card-header>
-                      <ion-card-title>Next Cloud</ion-card-title>
-                      <ion-card-subtitle>Software que permite crear servicio de alojamiento de archivos.</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item>
-              </div>
-              <div>
-                <ion-item lines="none" href="http://190.210.221.15:8089/suitecrm">
-                  <ion-card>
-                    <i class="fas fa-cube"></i>
-                    <ion-card-header>
-                      <ion-card-title>Sugar</ion-card-title>
-                      <ion-card-subtitle>Sistema utilizado para la administración de la empresa.</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item>
-              </div>
-              <div>
-                <ion-item lines="none" href="https://190.210.221.15:8888/svn/PAL-Estable/ISO">
-                  <ion-card>
-                    <i class="fas fa-sitemap"></i>
-                    <ion-card-header>
-                      <ion-card-title>SVN</ion-card-title>
-                      <ion-card-subtitle>Sistema de control de versiones.</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item>
-              </div>
-              
-            </div>
-
-          </ion-item>
-  
-        </div>
-
-
-        <div padding  style="border-style: groove;">
-          
-          <ion-item-divider class="fondoN"  (click)="show3=!show3" style="height: 50px;">
-            <p class="fondoN" >Herramientas Públicas</p>
-          </ion-item-divider>
-        
-          <ion-item *ngIf="show3">
-            <div >
-              
-              <div>
-                <ion-item lines="none" href="https://www.dicsys.com/">
-                  <ion-card>
-                    <i class="fas fa-globe"></i>
-                    <ion-card-header>
-                      <ion-card-title>Página Web</ion-card-title>
-                      <ion-card-subtitle>Página web ofical de Dicsys.</ion-card-subtitle>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item>
-               </div>
-              
-            <div>
-              <ion-item lines="none">
-                <ion-card>
-                  <i class="fab fa-skype"></i>
-                  <ion-card-header>
-                    <ion-card-title>Skype</ion-card-title>
-                    <ion-card-subtitle>Software que permite comunicaciones de texto, voz y vídeo sobre Internet.</ion-card-subtitle>
-                  </ion-card-header>
-                </ion-card>
-              </ion-item>
-             </div>
-
-             <div>
-              <ion-item lines="none">
-                <ion-card>
-                  <i class="fas fa-dollar-sign"></i>
-                  <ion-card-header>
-                    <ion-card-title>Recibos de Sueldo Online</ion-card-title>
-                    <ion-card-subtitle>Proximamente prodras acceder a tu recibo de sueldo online.</ion-card-subtitle>
-                  </ion-card-header>
-                </ion-card>
-              </ion-item>
-             </div>
-
-             <div>
-              <ion-item lines="none">
-                <ion-card>
-                  <i class="fab fa-google-drive"></i>
-                  <ion-card-header>
-                    <ion-card-title>Drive</ion-card-title>
-                    <ion-card-subtitle>Servicio de alojamiento de archivos.</ion-card-subtitle>
-                  </ion-card-header>
-                </ion-card>
-              </ion-item>
-             </div>
-             
-             <div>
-              <ion-item lines="none">
-                <ion-card>
-                  <i class="fab fa-slack"></i>
-                  <ion-card-header>
-                    <ion-card-title>Slack</ion-card-title>
-                    <ion-card-subtitle>Herramienta de comunicación en equipo​.</ion-card-subtitle>
-                  </ion-card-header>
-                </ion-card>
-              </ion-item>
-             </div>
-
-            </div>
-          </ion-item>
-  
-        </div>
-
-
-
-      </ion-list>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
+  <div >
 
     
+
+  <ion-slides pager="true" [options]="slideOpts" style="--bullet-background: #ffffff; --bullet-background-active: #ffffff;">
+
+    <ion-slide >
+      
+      <ion-card  class="card">
+        <h1 class="titulo" ><ion-icon name="arrow-forward" style="color: #ffffff;" ></ion-icon> GESTION <ion-icon name="arrow-forward" style="color: #0075BE;" ></ion-icon></h1>
+        
+        <ion-card-content >
+          
+          <ion-grid class="centradoG"  >
+            
+            <ion-row >
+        
+              <ion-col>
+        
+                  <ion-card lines="none" href="http://190.210.221.15:8081/login" >
+                    <i class="fas fa-bug" style="color: #0075BE;border: 0.5rem solid #FFF000;"></i>
+                    <ion-card-header>
+                      <ion-card-title>Bug Genie</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-subtitle>Seguimiento de la gestión de proyectos.</ion-card-subtitle>
+                  </ion-card>
+          
+              </ion-col>
+        
+              <ion-col>
+        
+                  <ion-card lines="none" href="http://190.210.221.15:9500/intranet/?page_id=980">
+                    <i class="fas fa-laptop" style="color: #0075BE;border: 0.5rem solid #FFF000;"></i>
+                    <ion-card-header>
+                      <ion-card-title>Tickets IT</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-subtitle>Sistema de tickets para la solicitud de soporte técnico.</ion-card-subtitle>
+                  </ion-card>
+        
+              </ion-col>
+        
+            </ion-row>
+          
+        
+            <ion-row >
+        
+              <ion-col>
+        
+                    <ion-card  lines="none" href="http://190.210.221.15:9500/intranet/?page_id=1170">
+                      <i class="fas fa-calendar-check" style="color: #0075BE;border: 0.5rem solid #FFF000;"></i>
+                      <ion-card-header>
+                        <ion-card-title>Reservas</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-subtitle >Sistema que permite gestionar la reserva de salas en Dicsys.</ion-card-subtitle>
+                    </ion-card>
+        
+              </ion-col>
+              
+              <ion-col>
+        
+                    <ion-card lines="none" href="http://webmail.dicsys.com/" >
+                      <i class="fas fa-envelope-open-text" style="color: #0075BE;border: 0.5rem solid #FFF000;"></i>
+                      <ion-card-header>
+                        <ion-card-title>E-Mail</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-subtitle  >Sistema de acceso al correo electrónico corporativo.</ion-card-subtitle>
+                      
+                    </ion-card>
+        
+              </ion-col>
+            </ion-row>
+          
+          </ion-grid>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+
+
+    <ion-slide>
+      <ion-card class="card">
+        <ion-card-content >
+          
+          <ion-grid class="centradoG"  >
+            <h1 class="titulo" ><ion-icon name="arrow-back" style="color: #E94E0F;" ></ion-icon> PUBLICAS <ion-icon name="arrow-forward" style="color: #E94E0F;" ></ion-icon></h1>
+            <ion-row >
+        
+              <ion-col>
+        
+                <ion-card lines="none" href="http://190.210.221.15:8000/MicroStrategy/asp/Main.aspx?evt=3001&src=Main.aspx.3001&Port=0&">
+                  <i class="fas fa-chart-bar" style="color: #E94E0F;border: 0.5rem solid #5BC5F2;"></i>
+                    <ion-card-header>
+                      <ion-card-title>Microstrategy</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-subtitle>Software de inteligencia empresarial.</ion-card-subtitle>
+                  </ion-card>
+          
+              </ion-col>
+        
+              <ion-col>
+        
+                  <ion-card lines="none">
+                  <i class="fas fa-cloud" style="color: #E94E0F;border: 0.5rem solid #5BC5F2;"></i>
+                    <ion-card-header>
+                      <ion-card-title>Next Cloud</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-subtitle>Software que permite crear servicio de alojamiento de archivos.</ion-card-subtitle>
+                  </ion-card>
+        
+              </ion-col>
+        
+            </ion-row>
+          
+        
+            <ion-row >
+        
+              <ion-col>
+        
+                <ion-card lines="none" href="http://190.210.221.15:8089/suitecrm">
+                  <i class="fas fa-cube" style="color: #E94E0F;border: 0.5rem solid #5BC5F2;"></i>
+                      <ion-card-header>
+                        <ion-card-title>Sugar</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-subtitle >Sistema utilizado para la administración de la empresa.</ion-card-subtitle>
+                    </ion-card>
+        
+              </ion-col>
+              
+              <ion-col>
+                
+                <ion-card lines="none" href="https://190.210.221.15:8888/svn/PAL-Estable/ISO">
+                  <i class="fas fa-sitemap" style="color: #E94E0F;border: 0.5rem solid #5BC5F2;"></i>
+                      <ion-card-header>
+                        <ion-card-title>SVN</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-subtitle  >Sistema de control de versiones.</ion-card-subtitle>
+                      
+                    </ion-card>
+        
+              </ion-col>
+            </ion-row>
+          
+          </ion-grid>
+
+
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+
+
+    <ion-slide>
+      <ion-card class="card">
+        <ion-card-content >
+          
+          <ion-grid class="centradoG"  >
+            <h1 class="titulo" ><ion-icon name="arrow-back" style="color: #53AF32;" ></ion-icon> ADMINISTRATIVAS </h1>
+            <ion-row >
+        
+              <ion-col>
+                
+                <ion-card lines="none" href="https://www.dicsys.com/">
+                  <i class="fas fa-globe" style="color: #53AF32;border: 0.5rem solid #F7A700;"></i>
+                    <ion-card-header>
+                      <ion-card-title>Página Web</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-subtitle>Página web ofical de Dicsys.</ion-card-subtitle>
+                  </ion-card>
+          
+              </ion-col>
+        
+              <ion-col>
+                
+                <ion-card lines="none">
+                  <i class="fab fa-skype" style="color: #53AF32;border: 0.5rem solid #F7A700;"></i>
+                    <ion-card-header>
+                      <ion-card-title>Skype</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-subtitle>Software que permite comunicaciones de texto, voz y vídeo sobre Internet.</ion-card-subtitle>
+                  </ion-card>
+        
+              </ion-col>
+        
+            </ion-row>
+          
+        
+            <ion-row >
+        
+              <ion-col>
+        
+                <ion-card lines="none">
+                  <i class="fas fa-dollar-sign" style="color: #53AF32;border: 0.5rem solid #F7A700;"></i>
+                      <ion-card-header>
+                        <ion-card-title>Recibos de Sueldo Online</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-subtitle >Proximamente prodras acceder a tu recibo de sueldo online.</ion-card-subtitle>
+                    </ion-card>
+        
+              </ion-col>
+              
+              <ion-col>
+                
+        
+                <ion-card lines="none">
+                  <i class="fab fa-google-drive" style="color: #53AF32;border: 0.5rem solid #F7A700;"></i>
+                      <ion-card-header>
+                        <ion-card-title>Drive</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-subtitle  >Servicio de alojamiento de archivos.</ion-card-subtitle>
+                      
+                    </ion-card>
+        
+              </ion-col>
+            </ion-row>
+        
+            <ion-row >
+        
+              <ion-col>
+        
+                <ion-card lines="none">
+                  <i class="fab fa-slack" style="color: #53AF32;border: 0.5rem solid #F7A700;"></i>
+                      <ion-card-header>
+                        <ion-card-title>Slack</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-subtitle >Herramienta de comunicación en equipo​.</ion-card-subtitle>
+                    </ion-card>
+        
+              </ion-col>
+              
+            </ion-row>
+          
+          </ion-grid>
+
+
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+
+
+
+
+
+
+
+
   </div>
 
   
@@ -244,47 +271,46 @@
   <div style="height: 100px;"></div>
   <ion-footer style="background-color:#ffffff;
   position:fixed;
-
   left:0;
   bottom:0;
   width:100%">
-    <ion-grid>
-      <ion-row>
-        
-        <ion-col size="3" class="columnaFooter" >
-          <ion-item lines="none">
-            <a href="https://www.facebook.com/DicsysSA/" target="_blank" ><ion-icon name="logo-facebook"></ion-icon></a>
-          </ion-item>
-        </ion-col>
-
-        <ion-col size="3"  class="columnaFooter">
-          <ion-item lines="none">
-            <a href="https://www.instagram.com/dicsys_sa" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
-          </ion-item>
-        </ion-col>
-
-        <ion-col size="3"  class="columnaFooter">
-          <ion-item lines="none">
-            <a href="https://www.twitter.com/dicsys_sa" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
-          </ion-item>
-        </ion-col>
-
-        <ion-col size="3"  class="columnaFooter">
-          <ion-item lines="none">
-           <a href="https://www.linkedin.com/company/somosdicsys" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
-          </ion-item>
-        </ion-col>
-
-      </ion-row>
-      <center>
-        <img 
-        src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png" 
-        srcset="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png 258w, http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS-230x58.png 230w" 
-        align="center"
-        style="height: 20px;">
-      </center>
-    </ion-grid>
-  </ion-footer>
+      <ion-grid>
+        <ion-row>
+          
+          <ion-col  class="columnaFooter" >
+            <ion-item lines="none">
+              <a href="https://www.facebook.com/DicsysSA/" target="_blank" ><ion-icon name="logo-facebook"  size="large"></ion-icon></a>
+            </ion-item>
+          </ion-col>
+  
+          <ion-col  class="columnaFooter">
+            <ion-item lines="none">
+              <a href="https://www.instagram.com/dicsys_sa" target="_blank"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+            </ion-item>
+          </ion-col>
+  
+          <ion-col  class="columnaFooter">
+            <ion-item lines="none">
+              <a href="https://www.twitter.com/dicsys_sa" target="_blank"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
+            </ion-item>
+          </ion-col>
+  
+          <ion-col   class="columnaFooter">
+            <ion-item lines="none">
+             <a href="https://www.linkedin.com/company/somosdicsys" target="_blank"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+            </ion-item>
+          </ion-col>
+  
+        </ion-row>
+        <center>
+          <img 
+          src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png" 
+          srcset="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png 258w, http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS-230x58.png 230w" 
+          align="center"
+          style="height: 20px;">
+        </center>
+      </ion-grid>
+    </ion-footer>
 
 
 </ion-content>

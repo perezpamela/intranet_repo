@@ -3,6 +3,7 @@ import { MenuController } from '@ionic/angular';
 import {UsuarioDatosService} from '../servicios/usuario-datos.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -18,11 +19,14 @@ export class HomePage implements OnInit {
     }
   };
 
-  usuario = localStorage.getItem('usuario');
-  constructor(private menuCtrl: MenuController,
+
+  constructor(
       	      private uService: UsuarioDatosService,
               private router: Router,
-              public menu: MenuController) { 
+              public menu: MenuController,
+
+              ) { 
+              
   }
   
   ngOnInit() {
@@ -31,6 +35,11 @@ export class HomePage implements OnInit {
   logout(){
     this.uService.logoutUser();
     this.router.navigate(['/home']);
+  }
+
+  tMenu(){
+   
+    this.menu.toggle();
   }
   
 

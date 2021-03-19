@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-novedades',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovedadesPage implements OnInit {
 
-  constructor() { }
+  constructor(  private _router: Router,
+    public menu: MenuController,
+    ) { }
 
   ngOnInit() {
+  }
+
+  volverInicio(){
+    this._router.navigate(['/home']);//vuelve a home
+  }
+
+  tMenu(){
+   
+    this.menu.toggle();
   }
 
 }

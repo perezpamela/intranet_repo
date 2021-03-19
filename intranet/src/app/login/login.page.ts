@@ -71,7 +71,7 @@ export class LoginPage implements OnInit {
       localStorage.setItem('usuario',this.mail )
        // this._router.navigate(['/special'])//SOLO ES LA NAVEGACION A LA PAGINA DE INICIO
       // var asd=localStorage.getItem('token');
-      // console.log(asd)
+     
       this._router.navigate(['/home']);
 
       },

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 	
-	  <ion-header >
-        <ion-item color="primary" >
-      
-          <ion-buttons slot="start">
-            <ion-menu-button menu="main-menu" ></ion-menu-button><!-- el atributo  menu="main-menu"   apunta al menu deseado....SE OMITE SI SOLO HAY UN MENU WE (el mismo main-menu en el hhtplogout) -->
-          </ion-buttons>
 
+      <ion-header >
+    
+        <ion-item style="--ion-background-color:#E94E0F; box-shadow: 0px 1px 10px rgba(177, 177, 177, 0.5); color:aliceblue">
+          <ion-buttons slot="start" >
+            <ion-button (click)="tMenu()">
+              <ion-icon slot="icon-only" name="menu"></ion-icon>
+            </ion-button>
+            <!-- el atributo  menu="main-menu"   apunta al menu deseado....SE OMITE SI SOLO HAY UN MENU WE (el mismo main-menu en el hhtplogout) -->
+          </ion-buttons>
           <ion-title >Redes</ion-title>
-      
+    
+          <ion-icon name="home" (click)="volverInicio()" style="color:rgb(255, 255, 255)"> </ion-icon>
         </ion-item>
       </ion-header>
 

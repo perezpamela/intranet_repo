@@ -1,15 +1,14 @@
 <ion-content [scrollEvents]="true" class="fondologin">
 
   <ion-header >
-    <ion-item color="primary">
+    <ion-item style="--ion-background-color:#0075BE;  color:rgb(255, 255, 255)">
 
       <ion-buttons slot="start" >
         <ion-back-button (click)="volverInicio()"></ion-back-button>
-      
     </ion-buttons>
       <ion-title >Mi perfil</ion-title>
 
-      <ion-icon name="ellipsis-vertical-outline"  (click)="presentActionSheet()"> </ion-icon>
+      <ion-icon name="ellipsis-vertical-outline"  (click)="presentActionSheet()" style="color:rgb(255, 255, 255)"> </ion-icon>
     </ion-item>
   </ion-header>
 
@@ -17,37 +16,34 @@
 
   
 
-  
+<div >
+    <ion-img src="https://tse3.mm.bing.net/th?id=OIP.8o_YwkrLBGST_Aa5Hv3b-gHaEH&pid=Api" ></ion-img>
+  </div>
 
   <div class="body">
 
-    <div class="col-sm-4 overflow">
-    <ion-img class="img2" src="https://tse3.mm.bing.net/th?id=OIP.8o_YwkrLBGST_Aa5Hv3b-gHaEH&pid=Api"></ion-img>
-  </div>
+    
 
   <ion-avatar class="img">
-    <img src="https://64.media.tumblr.com/df185589006321d70d37d1a59040d7c3/df57f19b4b4b783a-cb/s2048x3072/8d02bae2ee6ecedf0f8409d4427e6a90e258e8cb.jpg">
-    <ion-label  id='nombreUsuarioLbl' class="nombreUsuario"></ion-label>
+    <img src="https://media.glassdoor.com/sql/2610962/dicsys-squarelogo-1566572714845.png">
   </ion-avatar>
+  <h1  id='nombreUsuarioLbl' class="nombreUsuario"></h1>
 
-  <br><br><br>
-  <ion-label class="titulo">Informacion</ion-label><br>
-  <ion-label id='infoLbl'>Sin Informacion</ion-label> 
-  <br><br>
+  
+  <ion-item lines="none" style="padding: 20px 0px 20px 0;"><div class="icono" style="background: #53AF32; " ></div><h1 class="nombreUsuario">Informacion</h1></ion-item>
+  <div style="padding: 10px 0px 20px 20px;"><ion-label id='infoLbl'>Sin Informacion</ion-label> </div>
+
   
 
-  <ion-label class="titulo">Comentarios</ion-label>
+  <ion-item lines="none" style="padding: 20px 0px 0px 0;"><div  class="icono" style="background: #F7A700; " ></div><h1 class="nombreUsuario">Comentarios</h1></ion-item>
 
-  <ion-slides pager="true" >
-    <ion-slide  *ngFor="let comentario of comentarios" >
 
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>  </ion-card-title>
-        </ion-card-header>
+  <ion-slides pager="true" style="--bullet-background: #0075BE; --bullet-background-active: #53AF32;">
+    <ion-slide  *ngFor="let comentario of comentarios,let i = index" >
 
-        <ion-card-content>
-          {{comentario.comment_content}}
+      <ion-card  [style]="colorElegido[i].codigo" style="color:#000000;display: flex; align-items: center; justify-content: center;margin-bottom: 30px; ">
+        <ion-card-content >
+         {{comentario.comment_content}}
         </ion-card-content>
       </ion-card>
 
@@ -55,7 +51,5 @@
   </ion-slides>
 
 
-
-  
 </div>
 </ion-content>

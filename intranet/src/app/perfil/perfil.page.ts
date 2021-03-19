@@ -14,6 +14,26 @@ export class PerfilPage implements OnInit {
 
   comentarios;
   //info:string;
+  colorElegido;
+  contador:number=0;
+
+  
+  colores: Array<{codigo: string}> = 
+  [
+  {codigo:'background:rgba(0, 117, 190, 0.5);--bullet-background: #0075BE; --bullet-background-active: #53AF32;'},
+
+  {codigo:'background:rgba(255, 204, 0, 0.5);'},
+
+  {codigo:'background:rgba(233, 78, 15, 0.5);'},
+
+  {codigo:'background:rgba(91, 197, 242, 0.5)'},
+  
+  {codigo:'background:rgba(83, 175, 50, 0.5);'},
+
+  {codigo:'background:rgba(247, 167, 0, 0.5);'}
+  ];
+  
+ 
 
   constructor(
     private usuarioDatosService: UsuarioDatosService,
@@ -21,7 +41,7 @@ export class PerfilPage implements OnInit {
     private _router: Router,
     public menu: MenuController,
     //private alertControl: AlertController
-    ) { }
+    ) { console.log("ggggggggggggggggggggggggggggggg")}
 
   ngOnInit(
     ) {    
@@ -127,12 +147,14 @@ cargar(){
     let res= u["data"];
     //console.log("res= "+res)
     let com;
+    let col;
     
     let num=Object.keys(res).length;
     
     if(num>=1){
     var band=0;
     com=new Array(num-1);
+    col=new Array(num-1);
     var info;
     //var string = JSON.stringify(u);
     //console.log("stringu= "+string)
@@ -146,7 +168,14 @@ cargar(){
       }
       else{
         com[band]=res[i];
-        band++
+
+        if(this.contador==6){
+          this.contador=0
+        }
+        
+        col[band]=this.colores[this.contador];
+        band++;
+        this.contador++;
       }
     }
 
@@ -155,6 +184,7 @@ cargar(){
     }
     else{
       this.comentarios = com;
+      this.colorElegido = col;
     }
     }
     else{
@@ -164,6 +194,8 @@ cargar(){
     
     
   })
+
+  
 };
 
 

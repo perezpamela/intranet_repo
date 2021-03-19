@@ -1,7 +1,13 @@
-.t{
+*{
+    font-family:  Arial, sans-serif,'Arial Narrow' ;
+  }
+  
+  .t{
     padding: 0px;
     margin: 0px;
     text-align: center;
+    font-size:10vw;
+    color:#ffffff;
 }
  
 
@@ -20,12 +26,6 @@ ion-item{
     --ion-background-color:transparent;
 }
  
-
-
-.Iontitulos {
-    margin: 1rem 1rem;
-    
-   }
  
  
 ion-item#dicsyanos{
@@ -147,3 +147,10 @@ h6{
   align-content: center;
   flex-wrap: wrap;
 }
+
+.titulo{
+    font-size:6vw;
+    color:#000000;
+    }
+    
+

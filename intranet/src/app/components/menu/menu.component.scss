@@ -1,0 +1,50 @@
+*{
+    font-family:  Arial, sans-serif,'Arial Narrow' ;
+  }
+  
+  .menuHeader{
+    height:180px;
+    width: 350px;
+    background: #0075BE;
+    background:linear-gradient(90deg,#0075BE 0%, #004D7E 100%);
+    box-shadow: 0px 1px 10px rgba(177, 177, 177, 0.5);
+    transform: rotate(-15deg);
+    
+    margin-left: -40px;
+    margin-top: -90px;
+    margin-bottom: 60px;
+}
+
+.perfil{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.nombre{
+    position: absolute;
+    margin-left: 80px;
+    margin-top: -35px;
+}
+
+.icono{
+    height:50px;
+    width: 20px;
+    margin-top: 15px;
+}
+
+
+
+
+.x{
+    --ion-background-color:#0075BE;
+    --ion-background-color:#FFF000;
+    --ion-background-color:#E94E0F;
+    --ion-background-color:#5BC5F2;
+    --ion-background-color:#53AF32;
+    --ion-background-color:#F7A700;
+
+    --ion-background-color:#004D7E;;
+    }

@@ -1,5 +1,7 @@
+*{
+  font-family:  Arial, sans-serif,'Arial Narrow' ;
+}
  
- /*
 h4, h3, h2{
     text-align: center;
     padding: 2px;
@@ -25,7 +27,7 @@ h4, h3, h2{
     
    
    
-  }*/
+  }
    
   section{
     border-bottom: 2px solid lightblue;
@@ -39,7 +41,6 @@ h4, h3, h2{
     
     
   }
-  
   section#ubicacion{
    
   padding: 0;
@@ -76,7 +77,19 @@ h4, h3, h2{
 }
 
 .fondoL{
-  --ion-background-color:#C9C3C3;
+  
   color:#000000
 }
 
+
+
+.icono{
+  height:50px;
+  width: 20px;
+  margin-top: 15px;
+}
+
+.titulo{
+  font-size:6vw;
+  color:#000000;
+  }

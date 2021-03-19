@@ -1,6 +1,7 @@
 import { Component, OnInit,AfterViewInit} from '@angular/core';
 
 import { Router } from '@angular/router'
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-redes-sociales',
@@ -9,7 +10,8 @@ import { Router } from '@angular/router'
 })
 export class RedesSocialesPage implements OnInit,AfterViewInit {
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router,
+    public menu: MenuController,) { }
 
   ngOnInit() {
   }
@@ -30,6 +32,16 @@ export class RedesSocialesPage implements OnInit,AfterViewInit {
     }
   }
 
+
+  tMenu(){
+   
+    this.menu.toggle();
+  } 
+
+
+  volverInicio(){
+    this._router.navigate(['/home']);//vuelve a home
+  }
  
 
 }

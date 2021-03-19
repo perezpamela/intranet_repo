@@ -13,11 +13,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './auth.guard';//importar AuthGuard 
 
 import { IonContent } from '@ionic/angular';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,ComponentsModule],
   providers: [
     StatusBar,
     SplashScreen,
@@ -28,5 +29,4 @@ import { IonContent } from '@ionic/angular';
   bootstrap: [AppComponent]
 })
 export class AppModule {}
-
 
