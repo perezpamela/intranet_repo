@@ -67,14 +67,7 @@ h4, h3, h2{
   }
 
 
-.columnaFooter{
-  padding: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
+
 
 .fondoL{
   
@@ -92,4 +85,14 @@ h4, h3, h2{
 .titulo{
   font-size:6vw;
   color:#000000;
+  }
+
+
+  .x{
+    background:rgba(0, 117, 190, 0.3);
+    background:rgba(255, 204, 0, 0.3);
+    background:rgba(233, 78, 15, 0.3);
+    background:rgba(91, 197, 242, 0.3);
+    background:rgba(83, 175, 50, 0.3);
+    background:rgba(247, 167, 0, 0.3);
   }

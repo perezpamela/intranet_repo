@@ -46,19 +46,7 @@ i{
 ion-card{
     text-align: center;
 }
-#footer{
-  text-align: center;
-  ion-icon{
-      font-size: 1.5rem;
-  }
-  ion-item{
-      padding-top:1.5rem;
-  }
-  h6{
-      padding:2px;
-      font-style: italic;
-  }
-}
+
 ion-card{
   
   box-shadow: none;
@@ -73,14 +61,7 @@ position: relative;
 height: 100%
 }
 
-.columnaFooter{
-padding: 10px;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-align-content: center;
-flex-wrap: wrap;
-}
+
 
 .centrado{
 margin-left: 5%;

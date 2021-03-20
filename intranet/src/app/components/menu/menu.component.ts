@@ -9,13 +9,14 @@ import {UsuarioDatosService} from '../../servicios/usuario-datos.service';
 import { Router } from '@angular/router'
 
 import { MenuController } from '@ionic/angular';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit{
 
   usuario:string =localStorage.getItem('usuario');
 
@@ -32,7 +33,12 @@ export class MenuComponent {
 
   }
 
-
+ngOnInit(){
+  this.usuarioDatosService.refreshNeeded$
+  .subscribe(()=>{
+    this.usuario =localStorage.getItem('usuario');
+  })
+}
 
 
   initializeApp() {
@@ -41,6 +47,7 @@ export class MenuComponent {
       this.splashScreen.hide();
     });
   }
+
 
 
  
@@ -80,10 +87,10 @@ export class MenuComponent {
     this.menu.close()
   }
 
- 
-
-
-
+  acercaDe(){
+    this._router.navigate(['/acerca-de']);
+    this.menu.close()
+  }
 
 
 }

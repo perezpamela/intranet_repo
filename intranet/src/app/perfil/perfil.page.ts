@@ -41,7 +41,7 @@ export class PerfilPage implements OnInit {
     private _router: Router,
     public menu: MenuController,
     //private alertControl: AlertController
-    ) { console.log("ggggggggggggggggggggggggggggggg")}
+    ) { }
 
   ngOnInit(
     ) {    

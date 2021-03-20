@@ -32,7 +32,7 @@
         </ion-item-divider>
       
         <ion-item *ngIf="d.showDetails" >
-          <div >
+          <div [style]="d.backdif">
             <img [src]="d.imagen" style="max-width: 100px;display: block;margin-left: auto; margin-right: auto;" />
             <br>{{d.details}}
           </div>
@@ -114,56 +114,7 @@
     
 
     <div style="height: 100px;"></div>
-    <ion-footer style="background-color:#ffffff;
-    position:fixed;
-    left:0;
-    bottom:0;
-    width:100%">
-        <ion-grid>
-          <ion-row>
-            
-            <ion-col  class="columnaFooter" >
-              <ion-item lines="none">
-                <a href="https://www.facebook.com/DicsysSA/" target="_blank" ><ion-icon name="logo-facebook"  size="large"></ion-icon></a>
-              </ion-item>
-            </ion-col>
-    
-            <ion-col  class="columnaFooter">
-              <ion-item lines="none">
-                <a href="https://www.instagram.com/dicsys_sa" target="_blank"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
-              </ion-item>
-            </ion-col>
-    
-            <ion-col  class="columnaFooter">
-              <ion-item lines="none">
-                <a href="https://www.twitter.com/dicsys_sa" target="_blank"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
-              </ion-item>
-            </ion-col>
-    
-            <ion-col   class="columnaFooter">
-              <ion-item lines="none">
-               <a href="https://www.linkedin.com/company/somosdicsys" target="_blank"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
-              </ion-item>
-            </ion-col>
-    
-          </ion-row>
-          <center>
-            <img 
-            src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png" 
-            srcset="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS.png 258w, http://190.210.221.15:9500/intranet/wp-content/uploads/2020/04/logoDICSYS-230x58.png 230w" 
-            align="center"
-            style="height: 20px;">
-          </center>
-        </ion-grid>
-      </ion-footer>
-   
-     
-     
-    
-
-
-
-
+    <app-footer></app-footer>
 
   </div>
 </ion-content>

@@ -42,6 +42,7 @@ export class LoginPage implements OnInit {
   };*/
 
   Login(){
+    localStorage.setItem('usuario',this.mail )
 
     let loginUserData = {mail:this.mail,pass:this.pass}//el email y la password del input 
 
@@ -78,6 +79,7 @@ export class LoginPage implements OnInit {
       err => {
         //console.log(err)
         alert(err.error.text);
+        localStorage.removeItem('usuario')//remover cualquier rastro de un token
       }
     )
    // }

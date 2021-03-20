@@ -48,7 +48,11 @@ const routes: Routes = [
   {
     path: 'redes-sociales',
     loadChildren: () => import('./redes-sociales/redes-sociales.module').then( m => m.RedesSocialesPageModule)
+  },  {
+    path: 'acerca-de',
+    loadChildren: () => import('./acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
   },
+
 
 
   

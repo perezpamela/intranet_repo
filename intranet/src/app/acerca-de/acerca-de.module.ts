@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HerramientasPageRoutingModule } from './herramientas-routing.module';
+import { AcercaDePageRoutingModule } from './acerca-de-routing.module';
 
-import { HerramientasPage } from './herramientas.page';
+import { AcercaDePage } from './acerca-de.page';
 import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HerramientasPageRoutingModule,
+    AcercaDePageRoutingModule,
     ComponentsModule
   ],
-  declarations: [HerramientasPage]
+  declarations: [AcercaDePage]
 })
-export class HerramientasPageModule {}
+export class AcercaDePageModule {}

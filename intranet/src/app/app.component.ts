@@ -28,7 +28,7 @@ export class AppComponent {
     
   ) {
     this.initializeApp();
-
+   
   }
 
   initializeApp() {

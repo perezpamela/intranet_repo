@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { DatosUtilesPageRoutingModule } from './datos-utiles-routing.module';
 
 import { DatosUtilesPage } from './datos-utiles.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DatosUtilesPageRoutingModule
+    DatosUtilesPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [DatosUtilesPage]
 })
