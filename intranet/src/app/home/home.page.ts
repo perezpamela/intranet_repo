@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
 
+  color:string='background:linear-gradient(90deg,#0075BE 0%, #004D7E 100%);'
+
   slideOpts = {
     loop: true,
     autoplay: {
@@ -26,7 +28,8 @@ export class HomePage implements OnInit {
               public menu: MenuController,
 
               ) { 
-              
+                this.uService.devolverColor(this.color)
+                
   }
   
   ngOnInit() {
@@ -40,6 +43,8 @@ export class HomePage implements OnInit {
   tMenu(){
    
     this.menu.toggle();
+    this.uService.refreshMenu();
+
   }
 
 

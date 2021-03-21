@@ -15,6 +15,8 @@ import { tap } from 'rxjs/operators';
 })
 export class UsuarioDatosService {
 
+  colorMenu:string
+
   constructor(
     private http: HttpClient,
     private _router: Router
@@ -48,12 +50,7 @@ export class UsuarioDatosService {
     
     return this.http
       .post<any>('http://localhost:5000/api/usuarios/email', loginUserData)
-      .pipe(//SEGUNDA PARTE DEL REFRESH...cuando este post ocurra mandamos un TAP
-        tap(()=>{//el tap nos va a permitir modificar ALGO en el servicioUsuario llamando al refreshneeded$.next metodo, que triguerea el next subject hit
-          this._refreshNeeded$.next();
-          
-        })
-      )
+     
     
   }
 
@@ -75,10 +72,20 @@ export class UsuarioDatosService {
 
   traerComentarios(loginUserData){//le paso el usuario
     const path = `http://localhost:5000/api/usuarios/comentario/${loginUserData}`; //loginUserData= desa1)
-    
-    
     return this.http.get<IComentario >(path);
-    
+  }
+
+  refreshMenu(){
+    this._refreshNeeded$.next();
+  }
+
+  devolverColor(datos){
+    this.colorMenu=datos;
+  }
+
+  mandarColor(){
+    return this.colorMenu
+
   }
 
 

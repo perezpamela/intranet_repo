@@ -11,6 +11,9 @@ import { Router } from '@angular/router'
 import { MenuController } from '@ionic/angular';
 import { OnInit } from '@angular/core';
 
+
+
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -20,6 +23,10 @@ export class MenuComponent implements OnInit{
 
   usuario:string =localStorage.getItem('usuario');
 
+  colorMenu:string
+
+
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -27,6 +34,8 @@ export class MenuComponent implements OnInit{
     private usuarioDatosService: UsuarioDatosService,
     private _router: Router,
     public menu: MenuController,
+
+   
     
   ) {
     this.initializeApp();
@@ -37,6 +46,9 @@ ngOnInit(){
   this.usuarioDatosService.refreshNeeded$
   .subscribe(()=>{
     this.usuario =localStorage.getItem('usuario');
+    this.colorMenu=this.usuarioDatosService.mandarColor();
+
+  
   })
 }
 
@@ -63,26 +75,35 @@ ngOnInit(){
   }
 
   Clientes(){
+
     this._router.navigate(['/clientes']);
     this.menu.close()
   }
 
   Herramientas(){
+ 
     this._router.navigate(['/herramientas']);
     this.menu.close()
+
+   
+  
   }
 
   DatosUtiles(){
+   
     this._router.navigate(['/datos-utiles']);
     this.menu.close()
   }
 
   Novedades(){
+    
     this._router.navigate(['/novedades']);
     this.menu.close()
+
   }
 
   redesSociales(){
+   
     this._router.navigate(['/redes-sociales']);//redirigirlo a la pagina de redes sociales!
     this.menu.close()
   }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router'
 import { MenuController } from '@ionic/angular';
+import { UsuarioDatosService } from '../servicios/usuario-datos.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { MenuController } from '@ionic/angular';
 export class DatosUtilesPage implements OnInit {
 
 
-  asd:string='#0075BE'
+ 
 
   data: Array<{title: string, details: string, icon: string,backdif:string,imagen: string, showDetails: boolean}> = 
   [
@@ -46,12 +47,14 @@ export class DatosUtilesPage implements OnInit {
   showDetails:false}
   ];
   
+  color:string='background:linear-gradient(90deg,#5BC5F2 0%, #3D83A1 100%);'
 
 
 
   constructor(public navCtrl: NavController,
     private _router: Router,
-    public menu: MenuController,) {
+    public menu: MenuController,
+    private uService: UsuarioDatosService,) {
 /*
     for(let i = 0; i < 4; i++ ){
       this.data.push({
@@ -61,6 +64,7 @@ export class DatosUtilesPage implements OnInit {
           showDetails: false
         });
     }*/
+    this.uService.devolverColor(this.color)
   }
 
   ngOnInit() {
@@ -77,13 +81,19 @@ export class DatosUtilesPage implements OnInit {
 
   }
 
+  tMenu(){
+    this.menu.toggle();
+    this.color='background:linear-gradient(90deg,#5BC5F2 0%, #3D83A1 100%);'
+    this.uService.devolverColor(this.color)
+    this.uService.refreshMenu();
+  } 
+
+
   volverInicio(){
     this._router.navigate(['/home']);//vuelve a home
-  }
-
-  tMenu(){
-   
-    this.menu.toggle();
+    this.color='background:linear-gradient(90deg,#0075BE 0%, #004D7E 100%);'
+    this.uService.devolverColor(this.color)
+    this.uService.refreshMenu();
   }
   
   

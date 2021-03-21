@@ -19,7 +19,7 @@
   <div >
     
 
-    <h1 class="titulo" STYLE="margin-left: 5%;margin-right: 5%;text-align: center;">QUE ES ESTO?</h1> 
+    
     
     <section style= "border-style: hidden;" >
     <ion-list class="fondoL" >
@@ -31,7 +31,7 @@
           <ion-label style="margin-left: 15px;">{{d.title}}</ion-label>
         </ion-item-divider>
       
-        <ion-item *ngIf="d.showDetails" >
+        <ion-item *ngIf="d.showDetails"  lines="none">
           <div [style]="d.backdif">
             <img [src]="d.imagen" style="max-width: 100px;display: block;margin-left: auto; margin-right: auto;" />
             <br>{{d.details}}
@@ -52,7 +52,7 @@
 
     
     <section style= "border-style: hidden;">
-      <h1 class="titulo" STYLE="margin-left: 5%;margin-right: 5%;text-align: center;padding: 5% 0;">CONTACTOS</h1> 
+      <h1 class="titulo" STYLE="margin-left: 5%;margin-right: 5%;text-align: center;padding: 5% 0;font-weight: bold;">CONTACTOS</h1> 
 
      <ion-list >
         <ion-item lines="none" href="mailto:rrhh@dicsys.com" ><ion-label>rrhh@dicsys.com</ion-label><div class="icono" style="background: #53AF32;  float: right;" ></div></ion-item>
@@ -67,7 +67,7 @@
      
     <section id="ubicacion">
 
-      <h1 class="titulo" STYLE="margin-left: 5%;margin-right: 5%;text-align: center;padding: 5% 0;">UBICACION</h1> 
+      <h1 class="titulo" STYLE="margin-left: 5%;margin-right: 5%;text-align: center;padding: 5% 0;font-weight: bold;">UBICACION</h1> 
 
       <ion-grid>
         <ion-row>

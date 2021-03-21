@@ -1,13 +1,13 @@
 <ion-menu side="start" menuId="first" contentId="main">
   <!-- Esto es si tenemos mas de un menu nada mas -z menuId="main"...adentro-->
   <!-- cpntent-id es una referencia para router-outlet (abajooo de todo aqui)-->
-  <div class="menuHeader"></div>
+  <div class="menuHeader" [style]="colorMenu"></div>
   <div class="perfil">
 
       <ion-avatar slot="start" (click)="Perfil()">
         <img src="https://media.glassdoor.com/sql/2610962/dicsys-squarelogo-1566572714845.png">
       </ion-avatar>
-      <ion-label class="nombre" style="color:rgb(200, 201, 202);  text-transform: uppercase">{{usuario}}</ion-label>
+      <ion-label class="nombre" [style]="colorusuario">{{usuario}}</ion-label>
 
 
   </div>
@@ -34,7 +34,8 @@
           <ion-label>Iniciolala</ion-label>
         </ion-item>
         -->
-        <ion-item (click)="Clientes()" lines="none"> 
+
+        <ion-item (click)="Clientes()" lines="none" >
           <div class="icono" style="background: #0075BE;"></div>
           <ion-label style="margin-left: 15px;">Clientes</ion-label>
         </ion-item>
