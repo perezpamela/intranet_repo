@@ -17,6 +17,8 @@ export class RedesSocialesPage implements OnInit,AfterViewInit {
     public menu: MenuController,
     private uService: UsuarioDatosService,) { 
       this.uService.devolverColor(this.color)
+      console.log("ppppp")
+      this.uService.refreshMenu();
     }
 
   ngOnInit() {

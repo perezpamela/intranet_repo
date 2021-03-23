@@ -9,7 +9,7 @@
         </ion-button>
         <!-- el atributo  menu="main-menu"   apunta al menu deseado....SE OMITE SI SOLO HAY UN MENU WE (el mismo main-menu en el hhtplogout) -->
       </ion-buttons>
-      <ion-title >Acerca de...</ion-title>
+      <ion-title (click)="tMenu()>Acerca de...</ion-title>
 
       <ion-icon name="home" (click)="volverInicio()" style="color:rgb(255, 255, 255)"> </ion-icon>
     </ion-item>
@@ -27,14 +27,20 @@
     
 
     <div style="margin: auto ;margin-top: auto; margin-bottom: auto;">
-      <h3 >Dicsys Intranet</h3>
-      <h4>asdddd</h4>
+      <h3 style="font-weight: bold;">Dicsys Intranet</h3>
+      <h4>Año 2021</h4>
       <ion-avatar style=" margin-left: auto;
       margin-right: auto;">
         <img src="https://media.glassdoor.com/sql/2610962/dicsys-squarelogo-1566572714845.png">
       </ion-avatar>
-      <h4>asdddd</h4>
-      <h4>asdddd</h4>
+      <h4>Integrantes</h4>
+      <h6>
+        Andrés Croquer<br>
+        Andrés Gerónimo<br>
+        Florencia Alberto<br>
+        Pamela Pérez<br>
+        David Pérez
+      </h6>
     </div>
 
 
