@@ -28,6 +28,8 @@ export class LoginPage implements OnInit {
     private _router: Router
   ) { 
     this.menu.swipeGesture(false)
+    console.log("mail:   "+this.mail)
+    console.log("pass:   "+this.pass)
   }
 
    
@@ -42,7 +44,7 @@ export class LoginPage implements OnInit {
   };*/
 
   Login(){
-    localStorage.setItem('usuario',this.mail )
+    /*localStorage.setItem('usuario',this.mail )
 
     let loginUserData = {mail:this.mail,pass:this.pass}//el email y la password del input 
 
@@ -67,6 +69,10 @@ export class LoginPage implements OnInit {
       } else{
         alert("Ese usuario está borrado.")
       }*/
+
+
+
+      /*
       alert("Contraseña ok ");
       localStorage.setItem('token', res.token) // T lallave es el npmbre 'token', el otro valor es el TOKEN que devuelve la api
       localStorage.setItem('usuario',this.mail )
@@ -100,6 +106,27 @@ export class LoginPage implements OnInit {
       
       });
     }*/
+    
   };
+
+
+  PrototipoLogin(u:string, p:string){
+
+    if(u===p){
+      if(u!="" && u!=null){
+        localStorage.setItem('usuario', this.mail);
+        localStorage.setItem('token', this.mail)
+        this._router.navigate(['/home']);
+      } else {
+        alert("Debe ingresar un usuario y una contraseña.");
+      }
+    } else {
+      alert("Para ingresar al prototipo ingrese el mismo valor en usuario y contraseña.");
+    }
+
+
+  };
+
+ 
 
 }

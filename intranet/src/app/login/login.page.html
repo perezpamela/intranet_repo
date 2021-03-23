@@ -32,10 +32,9 @@
         <ion-input [(ngModel)]="pass" name="i_pass" type="password"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label  class="ion-padding"> Mantener sesión iniciada.</ion-label>
+        
       </ion-item>
-      <ion-button expand="block" (click)="Login()" style="--ion-color-secondary: #0075BE;">Iniciar Sesión</ion-button>
+      <ion-button expand="block" (click)="PrototipoLogin(mail,pass)" style="--ion-color-secondary: #0075BE;">Iniciar Sesión</ion-button>
     
     
   </form>
@@ -45,7 +44,7 @@
   </div>
 
 
-  <div style="height: 125px;"></div>
+  <div style="height: 150px;"></div>
 
 
     <div style=" padding: 50px;
