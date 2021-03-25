@@ -16,24 +16,22 @@
 
   
 
-  <div >
-    
 
+  <main style="min-height: 91vh; margin-bottom: -72px;">
     
-    
-    <section style= "border-style: hidden;" >
-    <ion-list class="fondoL" >
+    <section  >
+    <ion-list >
       <div padding *ngFor="let d of data" (click)="toggleDetails(d)" >
         
-        <ion-item-divider class="fondoL" style= "border-style: hidden;">
-          <div class="icono" [style]="d.icon" ></div>
+        <ion-item-divider >
+          <div [style]="d.icon" ></div>
           
           <ion-label style="margin-left: 15px;">{{d.title}}</ion-label>
         </ion-item-divider>
       
         <ion-item *ngIf="d.showDetails"  lines="none">
           <div [style]="d.backdif">
-            <img [src]="d.imagen" style="max-width: 100px;display: block;margin-left: auto; margin-right: auto;" />
+            <img [src]="d.imagen" class="imagen" />
             <br>{{d.details}}
           </div>
         </ion-item>
@@ -43,31 +41,21 @@
   </section>
 
 
-
-
-
-
-     
-    
-
-    
-    <section style= "border-style: hidden;">
-      <h1 class="titulo" STYLE="margin-left: 5%;margin-right: 5%;text-align: center;padding: 5% 0;font-weight: bold;">CONTACTOS</h1> 
+    <section >
+      <h1>CONTACTOS</h1> 
 
      <ion-list >
-        <ion-item lines="none" href="mailto:rrhh@dicsys.com" ><ion-label>rrhh@dicsys.com</ion-label><div class="icono" style="background: #53AF32;  float: right;" ></div></ion-item>
-        <ion-item lines="none" href="mailto:seleccion@dicsys.com"><ion-label>seleccion@dicsys.com</ion-label><div class="icono" style="background: #F7A700;  float: right;" ></div></ion-item>
-        <ion-item lines="none" href="mailto:sistemas@dicsys.com"><ion-label>sistemas@dicsys.com</ion-label><div class="icono" style="background: #0075BE;  float: right;" ></div></ion-item>
-        <ion-item lines="none" href="mailto:directores@dicsys.com"><ion-label>directores@dicsys.com</ion-label><div class="icono" style="background: #FFF000;  float: right;" ></div></ion-item>
+        <ion-item lines="none" href="mailto:rrhh@dicsys.com" ><ion-label>rrhh@dicsys.com</ion-label><div class="icono" style="background: #53AF32;  " ></div></ion-item>
+        <ion-item lines="none" href="mailto:seleccion@dicsys.com"><ion-label>seleccion@dicsys.com</ion-label><div class="icono" style="background: #F7A700;  " ></div></ion-item>
+        <ion-item lines="none" href="mailto:sistemas@dicsys.com"><ion-label>sistemas@dicsys.com</ion-label><div class="icono" style="background: #0075BE;  " ></div></ion-item>
+        <ion-item lines="none" href="mailto:directores@dicsys.com"><ion-label>directores@dicsys.com</ion-label><div class="icono" style="background: #FFF000;  " ></div></ion-item>
      </ion-list>
     </section>
 
 
-
-     
     <section id="ubicacion">
 
-      <h1 class="titulo" STYLE="margin-left: 5%;margin-right: 5%;text-align: center;padding: 5% 0;font-weight: bold;">UBICACION</h1> 
+      <h1 >UBICACION</h1> 
 
       <ion-grid>
         <ion-row>
@@ -105,16 +93,19 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-      <ion-item>  
-      </ion-item>
+
     </section>
-     
-     
-    
-    
 
-    <div style="height: 100px;"></div>
-    <app-footer></app-footer>
 
-  </div>
+    <div style="height: 72px;"></div>
+
+
+  </main>
+
+  <app-footer></app-footer>
 </ion-content>
+
+
+
+
+

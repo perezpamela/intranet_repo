@@ -2,7 +2,7 @@
     font-family:  Arial, sans-serif,'Arial Narrow' ;
   }
   
-  .menuHeader{
+.menuHeader{
     height:180px;
     width: 350px;
     //background: #0075BE;
@@ -38,9 +38,6 @@
     margin-top: 15px;
 }
 
-
-
-
 .x{
     --ion-background-color:#0075BE;
     --ion-background-color:#FFF000;
@@ -51,3 +48,7 @@
 
     --ion-background-color:#004D7E;;
     }
+
+ion-label{
+    margin-left: 15px;
+  }
