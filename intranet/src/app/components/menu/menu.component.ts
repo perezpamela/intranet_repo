@@ -81,12 +81,9 @@ ngOnInit(){
   }
 
   Herramientas(){
- 
+
     this._router.navigate(['/herramientas']);
     this.menu.close()
-
-   
-  
   }
 
   DatosUtiles(){
@@ -106,6 +103,7 @@ ngOnInit(){
    
     this._router.navigate(['/redes-sociales']);//redirigirlo a la pagina de redes sociales!
     this.menu.close()
+    this.usuarioDatosService.refreshMenu();
   }
 
   acercaDe(){

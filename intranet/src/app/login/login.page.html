@@ -1,69 +1,48 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content >
 
-    <ion-item color="primary">
-    <ion-toolbar>
-      <ion-title size="large">Intranet Dicsys</ion-title>
-    </ion-toolbar>
-  </ion-item>
-
-  </ion-header>
-
+  <main style="min-height: 100vh; margin-bottom: -100px;">
   
-
-
-
-
-
+    <ion-img class="logo-dicsys" src="http://dicsys.com/wp-content/uploads/2016/02/isologotipo.png"  style="margin-left: 2%;margin-right: 2%;"></ion-img>
+    <div style="height: 25px;"></div>
+    
+    <div style="margin-left: 5%;margin-right: 5%;">
+    <div >
+      
+      <form>
+        <ion-item>
+          <ion-label position="floating">Usuario/email</ion-label>
+          <ion-input [(ngModel)]="mail" name="usuario" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña:</ion-label>
+          <ion-input [(ngModel)]="pass" name="i_pass" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          
+        </ion-item>
+        <ion-button expand="block" (click)="Login()" style="--ion-color-secondary: #0075BE;">Iniciar Sesión</ion-button>
+      
+      
+    </form>
+    </div>
+    
   
-  <ion-img class="logo-dicsys" src="http://dicsys.com/wp-content/uploads/2016/02/isologotipo.png"  style="margin-left: 2%;margin-right: 2%;"></ion-img>
-  <div style="height: 25px;"></div>
+    </div>
+  <div style="height: 100px;"></div>
+  </main>
   
-  <div class="login-container" style="margin-left: 5%;margin-right: 5%;">
-  <div class="formHolder">
+  
     
-    <form>
-      <ion-item>
-        <ion-label position="floating">Usuario/email</ion-label>
-        <ion-input [(ngModel)]="mail" name="usuario" type="text"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Contraseña:</ion-label>
-        <ion-input [(ngModel)]="pass" name="i_pass" type="password"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label  class="ion-padding"> Mantener sesión iniciada.</ion-label>
-      </ion-item>
-      <ion-button expand="block" (click)="Login()" style="--ion-color-secondary: #0075BE;">Iniciar Sesión</ion-button>
-    
-    
-  </form>
+  <footer style="height: 100px;">
+  
+      <div style=" padding: 50px;
+      background: url(http://www.dicsys.com/wp-content/uploads/2014/06/dicsys_fondo-paralax-2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      width:100%">
+  
   </div>
+  </footer>
   
-
-  </div>
-
-
-  <div style="height: 125px;"></div>
-
-
-    <div style=" padding: 50px;
-    background: url(http://www.dicsys.com/wp-content/uploads/2014/06/dicsys_fondo-paralax-2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: rgb(255, 0, 0);
-    background-position: bottom;
-    
-
-    left:0;
-    bottom:0;
-    width:100%">
-     
-
-
-
-</div>
-    
-
-</ion-content>
+  </ion-content>
