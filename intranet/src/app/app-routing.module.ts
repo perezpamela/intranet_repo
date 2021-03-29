@@ -52,6 +52,38 @@ const routes: Routes = [
     path: 'acerca-de',
     loadChildren: () => import('./acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
   },
+  {
+    path: 'formacion',
+    loadChildren: () => import('./formacion/formacion.module').then( m => m.FormacionPageModule)
+  },
+  {
+    path: 'normas',
+    loadChildren: () => import('./normas/normas.module').then( m => m.NormasPageModule)
+  },
+  {
+    path: 'logros',
+    loadChildren: () => import('./logros/logros.module').then( m => m.LogrosPageModule)
+  },
+  {
+    path: 'beneficios',
+    loadChildren: () => import('./beneficios/beneficios.module').then( m => m.BeneficiosPageModule)
+  },
+  {
+    path: 'programa-referido',
+    loadChildren: () => import('./programa-referido/programa-referido.module').then( m => m.ProgramaReferidoPageModule)
+  },
+  {
+    path: 'estructura-dicsys',
+    loadChildren: () => import('./estructura-dicsys/estructura-dicsys.module').then( m => m.EstructuraDicsysPageModule)
+  },
+  {
+    path: 'innovacion',
+    loadChildren: () => import('./innovacion/innovacion.module').then( m => m.InnovacionPageModule)
+  },
+  {
+    path: 'procesos-org',
+    loadChildren: () => import('./procesos-org/procesos-org.module').then( m => m.ProcesosOrgPageModule)
+  },
 
 
 

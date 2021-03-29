@@ -26,6 +26,7 @@ export class HomePage implements OnInit {
       	      private uService: UsuarioDatosService,
               private router: Router,
               public menu: MenuController,
+              private _router: Router,
 
               ) { 
                 this.uService.devolverColor(this.color)
@@ -49,7 +50,44 @@ export class HomePage implements OnInit {
 
 
 
-
+  formacion(){
+    this._router.navigate(['/formacion']);
+    this.menu.close()
+  }
+  normas(){
+    this._router.navigate(['/normas']);
+    this.menu.close()
+  }
+  logros(){
+    this._router.navigate(['/logros']);
+    this.menu.close()
+  }
+  beneficios(){
+    this._router.navigate(['/beneficios']);
+    this.menu.close()
+  }
+  referidos(){
+    this._router.navigate(['/programa-referido']);
+    this.menu.close()
+  }
+  estructura(){
+    this._router.navigate(['/estructura-dicsys']);
+    this.menu.close()
+  }
+  innovacion(){
+    this._router.navigate(['/innovacion']);
+    this.menu.close()
+  }
+  procesos(){
+    this._router.navigate(['/procesos-org']);
+    this.menu.close()
+  }
+  
+  
+  
+  
+  
+  
   
   
 
