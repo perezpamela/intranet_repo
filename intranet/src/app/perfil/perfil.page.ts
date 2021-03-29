@@ -272,9 +272,13 @@ cargar(){
   
 };
 
+color:string='background:linear-gradient(90deg,#0075BE 0%, #004D7E 100%);'
 
 volverInicio(){
   this._router.navigate(['/home']);//vuelve a home
+  this.color='background:linear-gradient(90deg,#0075BE 0%, #004D7E 100%);'
+  this.usuarioDatosService.devolverColor(this.color)
+  this.usuarioDatosService.refreshMenu();
 }
 
 
