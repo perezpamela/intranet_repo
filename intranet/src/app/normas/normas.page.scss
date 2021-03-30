@@ -1,0 +1,39 @@
+i{
+
+    border-radius: 50%;
+    color:#53AF32;
+    border: 0.3rem solid #F7A700; 
+    background:white;
+    text-align: right;
+
+}
+
+.body{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+ion-item-divider{
+    border-style: hidden;
+    margin-top: 10%;
+    color:black;
+    background:rgba(0, 117, 190, 0);
+}
+
+
+
+.items{
+    --background:rgba(0, 117, 190, 0);
+}
+
+.elDiv{
+    clip-path: polygon(100% 0, 100% 57%, 86% 57%, 78% 100%, 0 100%, 0 0);
+
+    height: 80px;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+  
+}
+
+

@@ -1,15 +1,75 @@
-<ion-header >
-  <ion-item style="--ion-background-color:#0075BE;  color:rgb(255, 255, 255)">
 
-    <ion-buttons slot="start" >
-      <ion-back-button (click)="volverInicio()"></ion-back-button>
-  </ion-buttons>
-    <ion-title >normas</ion-title>
-  </ion-item>
-</ion-header>
+<ion-content [scrollEvents]="true" >
 
 
 
-<ion-content>
+    <ion-header >
+      <ion-item style="--ion-background-color:#0075BE;  color:rgb(255, 255, 255)">
+  
+        <ion-buttons slot="start" >
+          <ion-back-button defaultHref="home" (click)="volverInicio()"></ion-back-button>
+      </ion-buttons>
+        <ion-title >Normas</ion-title>
+  
+      </ion-item>
+    </ion-header>
+  
+    
+
+  
+<main class="body">
+   
+<div style="position: relative; margin-top: 15%;">
+  <div class="elDiv" style="        
+  display: inline-flex;
+  align-items: center;
+  margin:0px;
+  background-color: rgba(0, 117, 190, 0.8)">
+      <ion-label style="margin-left: 15px;">Políticas de calidad</ion-label>
+  </div>
+  <i class="fa fa-download" style="position:absolute; bottom: 0; right: 5%;" ></i>
+</div>
+
+<div style="position: relative; margin-top: 15%;">
+  <div class="elDiv" style="        
+  display: inline-flex;
+  align-items: center;
+  margin:0px;
+  background-color: rgba(255, 204, 0, 0.8)">
+      <ion-label style="margin-left: 15px;">Normas de Convivencia</ion-label>
+  </div>
+  <i class="fa fa-download" style="position:absolute; bottom: 0; right: 5%;" ></i>
+</div>
+
+<div style="position: relative; margin-top: 15%;">
+  <div class="elDiv" style="        
+  display: inline-flex;
+  align-items: center;
+  margin:0px;
+  background-color:rgba(233, 78, 15, 0.8)">
+      <ion-label style="margin-left: 15px;">Políticas de RRHH</ion-label>
+  </div>
+  <i class="fa fa-download" style="position:absolute; bottom: 0; right: 5%;" ></i>
+</div>
+
+<div style="position: relative; margin-top: 15%;">
+  <div class="elDiv" style="        
+  display: inline-flex;
+  align-items: center;
+  margin:0px;
+  background-color: rgba(91, 197, 242, 0.8)">
+      <ion-label style="margin-left: 15px;">Normas por Ley de Software</ion-label>
+  </div>
+  <i class="fa fa-download" style="position:absolute; bottom: 0; right: 5%;" ></i>
+</div>
+
+  
+</main>
+
+
+
 
 </ion-content>
+
+
+

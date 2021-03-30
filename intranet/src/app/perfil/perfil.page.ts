@@ -17,7 +17,6 @@ export class PerfilPage implements OnInit {
   colorElegido;
   contador:number=0;
 
-  color:string='background:linear-gradient(90deg,#53AF32 0%, #387823 100%);'
   
   colores: Array<{codigo: string}> = 
   [
@@ -33,6 +32,51 @@ export class PerfilPage implements OnInit {
 
   {codigo:'background:rgba(247, 167, 0, 0.5);'}
   ];
+
+
+  comentarioSinBase=
+  [
+    {
+        "comment_id": 22,
+        "comment_content": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?",
+        "comment_type": "comentario"
+    },
+    {
+        "comment_id": 23,
+        "comment_content": "Why does Mr. Polite Cats snout look the way it does? Its very cute, just curious.",
+        "comment_type": "comentario"
+    },
+    {
+        "comment_id": 24,
+        "comment_content": "Hi Ollie! It’s my Bday (the hooman Maaa ??not Mimi ?) Can I please get a happy birthday? ???",
+        "comment_type": "comentario"
+    },
+    {
+        "comment_id": 25,
+        "comment_content": "Hey I saw a top on SHEIN with Ollies face on it , are you aware? They’re selling it and I was curious if you knew",
+        "comment_type": "comentario"
+    },
+    {
+        "comment_id": 26,
+        "comment_content": "Ultimate FLOOF",
+        "comment_type": "comentario"
+    },
+    {
+        "comment_id": 27,
+        "comment_content": "So polite!",
+        "comment_type": "comentario"
+    },
+    {
+        "comment_id": 28,
+        "comment_content": "@janethoots have you seen this cutie?? I just love his sweet face!!!❤️",
+        "comment_type": "comentario"
+    },
+    {
+        "comment_id": 29,
+        "comment_content": "@juli.bakker volg je deze poezel al?",
+        "comment_type": "comentario"
+    }
+]
   
  
 
@@ -42,7 +86,9 @@ export class PerfilPage implements OnInit {
     private _router: Router,
     public menu: MenuController,
     //private alertControl: AlertController
-    ) { }
+    ) {
+    
+     }
 
   ngOnInit(
     ) {    
@@ -141,12 +187,34 @@ async presentActionSheet() {
 
 
 cargar(){
+  
   var us=localStorage.getItem('usuario').toUpperCase();
   document.getElementById('nombreUsuarioLbl').innerHTML = us;
+  
+   
+  
+    let leng=this.comentarioSinBase.length
+    let col=new Array(leng);
+ 
+  for (var i=0 ; i< leng ; i++) {    
+    col[i]=this.colores[this.contador];
+    this.contador++;
+    if(this.contador==6){
+      this.contador=0
+    }
+   
+  }
 
+  this.colorElegido = col;
+
+
+
+
+  ///TODO ESTO PARA BASE DE DATOS...
+/*
   this.usuarioDatosService.traerComentarios(us).subscribe(u => {//us=desa1 localStorage
     let res= u["data"];
-    //console.log("res= "+res)
+   // console.log("res= "+res)
     let com;
     let col;
     
@@ -161,6 +229,7 @@ cargar(){
     //console.log("stringu= "+string)
     //var comentario = JSON.parse(string);
     //console.log("comentario= "+comentario.comment_content)
+
 
     for (var i = 0 ; i< num ; i++) {
       if(res[i].comment_type=='Informacion'){
@@ -181,24 +250,29 @@ cargar(){
     }
 
     if(band==0){
+
       this.comentarios = [{comment_content:"Sin comentarios"}];
     }
     else{
+      
       this.comentarios = com;
       this.colorElegido = col;
+      
     }
     }
     else{
+
       this.comentarios = [{comment_content:"Sin comentarios"}];
     }
 
     
     
-  })
+  })*/
 
   
 };
 
+color:string='background:linear-gradient(90deg,#0075BE 0%, #004D7E 100%);'
 
 volverInicio(){
   this._router.navigate(['/home']);//vuelve a home

@@ -8,12 +8,14 @@ import { NormasPageRoutingModule } from './normas-routing.module';
 
 import { NormasPage } from './normas.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NormasPageRoutingModule
+    NormasPageRoutingModule,
+    
   ],
   declarations: [NormasPage]
 })
