@@ -9,6 +9,8 @@ import { UsuarioDatosService } from '../servicios/usuario-datos.service';
 })
 export class ProcesosOrgPage implements OnInit {
   color:string='background:linear-gradient(90deg,#53AF32 0%, #387823 100%);'
+  
+  imagen="https://media.glassdoor.com/sql/2610962/dicsys-squarelogo-1566572714845.png"
 
   constructor(    private _router: Router,
     private usuarioDatosService: UsuarioDatosService,) { }

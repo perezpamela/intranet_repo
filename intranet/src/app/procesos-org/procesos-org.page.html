@@ -1,15 +1,89 @@
-<ion-header >
-  <ion-item style="--ion-background-color:#0075BE;  color:rgb(255, 255, 255)">
-
-    <ion-buttons slot="start" >
-      <ion-back-button (click)="volverInicio()"></ion-back-button>
-  </ion-buttons>
-    <ion-title >procesosOrg</ion-title>
-  </ion-item>
-</ion-header>
+<ion-content [scrollEvents]="true" >
 
 
 
-<ion-content>
+  <ion-header >
+    <ion-item style="--ion-background-color:#0075BE;  color:rgb(255, 255, 255)">
+
+      <ion-buttons slot="start" >
+        <ion-back-button defaultHref="home" (click)="volverInicio()"></ion-back-button>
+    </ion-buttons>
+      <ion-title >Proc organizacionales</ion-title>
+
+    </ion-item>
+  </ion-header>
+
+  
+
+
+<main class="body">
+ 
+
+  <ion-grid style="margin-top: 10px; margin-left: 5px;margin-right: 5px; ">
+    
+    <ion-row style="text-align: center;">
+      <ion-col >
+          <!-- -->
+          <ion-card  >
+              <img [src]=imagen style="background: rgba(0, 117, 190, 0.8); padding: 5px;  border-radius: 10px 10px 10px 10px;">
+            <h6>Administracíon</h6>
+          </ion-card>
+       
+      </ion-col>
+      <ion-col  >
+        <!-- -->
+        <ion-card >
+          <img [src]=imagen style="background: rgba(255, 204, 0,0.8); padding: 5px;  border-radius: 10px 10px 10px 10px;">
+          <h6>Comercial</h6>
+        </ion-card>
+    </ion-col>
+    </ion-row>
+  
+    <ion-row style="text-align: center;">
+      <ion-col>
+          <!-- -->
+          <ion-card >
+            <img [src]=imagen style="background: rgba(233, 78, 15,0.8); padding: 5px;  border-radius: 10px 10px 10px 10px;">
+            <h6>Documentos Generales</h6>
+          </ion-card>
+      </ion-col>
+      <ion-col >
+        <!-- -->
+        <ion-card >
+          <img [src]=imagen style="background: rgba(91, 197, 242,0.8); padding: 5px;  border-radius: 10px 10px 10px 10px;">
+          <h6>Produccion</h6>
+        </ion-card>
+    </ion-col>
+    </ion-row>
+  
+    <ion-row style="text-align: center;">
+      <ion-col  >
+          <!-- -->
+          <ion-card >
+            <img [src]=imagen style="background: rgba(83, 175, 50,0.8); padding: 5px;  border-radius: 10px 10px 10px 10px;">
+            <h6>Recursos Humanos</h6>
+          </ion-card>
+      </ion-col>
+      <ion-col  >
+        <!--  -->
+        <ion-card >
+          <img [src]=imagen style="background: rgba(247, 167, 0,0.8); padding: 5px;  border-radius: 10px 10px 10px 10px;">
+          <h6>Soporte IT</h6>
+        </ion-card>
+    </ion-col>
+    </ion-row>
+  
+    
+  
+  </ion-grid>
+
+
+</main>
+
+
+
 
 </ion-content>
+
+
+
