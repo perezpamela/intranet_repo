@@ -20,20 +20,21 @@ export class PerfilPage implements OnInit {
   
   colores: Array<{codigo: string}> = 
   [
-  {codigo:'background:rgba(0, 117, 190, 0.5);--bullet-background: #0075BE; --bullet-background-active: #53AF32;'},
+  {codigo:'background-color:rgba(0, 117, 190, 0.5);--bullet-background: #0075BE; --bullet-background-active: #53AF32;'},
 
-  {codigo:'background:rgba(255, 204, 0, 0.5);'},
+  {codigo:'background-color:rgba(255, 204, 0, 0.5);'},
 
-  {codigo:'background:rgba(233, 78, 15, 0.5);'},
+  {codigo:'background-color:rgba(233, 78, 15, 0.5);'},
 
-  {codigo:'background:rgba(91, 197, 242, 0.5)'},
+  {codigo:'background-color:rgba(91, 197, 242, 0.5)'},
   
-  {codigo:'background:rgba(83, 175, 50, 0.5);'},
+  {codigo:'background-color:rgba(83, 175, 50, 0.5);'},
 
-  {codigo:'background:rgba(247, 167, 0, 0.5);'}
+  {codigo:'background-color:rgba(247, 167, 0, 0.5);'}
   ];
 
-
+//***** *///***** *///***** *////TODO ESTO PARA mostrar sin base...
+/*
   comentarioSinBase=
   [
     {
@@ -77,6 +78,8 @@ export class PerfilPage implements OnInit {
         "comment_type": "comentario"
     }
 ]
+//***** *///***** *///***** *////TODO ESTO PARA mostrar sin base...
+
   
  
 
@@ -190,10 +193,11 @@ cargar(){
   
   var us=localStorage.getItem('usuario').toUpperCase();
   document.getElementById('nombreUsuarioLbl').innerHTML = us;
-  
-   
-  
-    let leng=this.comentarioSinBase.length
+
+
+//***** *///***** *///***** *////TODO ESTO PARA mostrar sin base...
+/*
+let leng=this.comentarioSinBase.length
     let col=new Array(leng);
  
   for (var i=0 ; i< leng ; i++) {    
@@ -206,12 +210,12 @@ cargar(){
   }
 
   this.colorElegido = col;
+//***** *///***** *///***** *////TODO ESTO PARA mostrar sin base...
 
 
 
-
-  ///TODO ESTO PARA BASE DE DATOS...
-/*
+  
+//***** *///***** *///***** *////TODO ESTO PARA BASE DE DATOS...
   this.usuarioDatosService.traerComentarios(us).subscribe(u => {//us=desa1 localStorage
     let res= u["data"];
    // console.log("res= "+res)
@@ -267,9 +271,9 @@ cargar(){
 
     
     
-  })*/
+  })
 
-  
+  //***** *///***** *///***** *////TODO ESTO PARA BASE DE DATOS...
 };
 
 color:string='background:linear-gradient(90deg,#0075BE 0%, #004D7E 100%);'

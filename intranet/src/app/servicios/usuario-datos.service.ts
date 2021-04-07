@@ -72,7 +72,13 @@ export class UsuarioDatosService {
 
   traerComentarios(loginUserData){//le paso el usuario
     const path = `http://localhost:5000/api/usuarios/comentario/${loginUserData}`; //loginUserData= desa1)
-    return this.http.get<IComentario >(path);
+    return this.http.get<IComentario>(path);
+  }
+
+
+  traerCumpleaños(){//le paso el usuario
+    const path = 'http://localhost:5000/api/usuarios/cumpleanos'; 
+    return this.http.get<IComentario>(path);
   }
 
   refreshMenu(){
