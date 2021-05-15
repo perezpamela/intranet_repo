@@ -1,0 +1,43 @@
+.flex-conteiner{
+    display: flex;
+    
+    margin: auto;
+    
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#b1{
+    color:green;
+    background-color: greenyellow;
+}
+
+
+.img{
+    border-radius: 8%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+    
+}
+#s1{
+    color: white;
+    background-color:#E94E0F;
+    border-radius: 3px;
+}
+
+
+
+

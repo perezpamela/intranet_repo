@@ -1,15 +1,56 @@
-<ion-header >
+<ion-header>
   <ion-item style="--ion-background-color:#0075BE;  color:rgb(255, 255, 255)">
 
-    <ion-buttons slot="start" >
+    <ion-buttons slot="start">
       <ion-back-button (click)="volverInicio()"></ion-back-button>
-  </ion-buttons>
-    <ion-title >ProgramaReferido</ion-title>
+    </ion-buttons>
+    <ion-title>Programas Referidos</ion-title>
   </ion-item>
 </ion-header>
 
 
-
 <ion-content>
+  <div class="flex-conteiner" >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="http://190.210.221.15:9500/intranet/wp-content/uploads/2020/05/Programa-de-referidos.jpg"
+            class="img">
 
+          <ion-text style="text-align: center;font-family: Arial, Helvetica, sans-serif; font-size: 3vw;">
+            <p> Es muy importante para nosotros que la comunidad de Dicsianos
+              crezca incorporando constantemente profesionales de excelencia.
+              Para esto tenemos previsto el programa de referidos. Seguramente conozcas excelentes profesionales que
+              estudian con vos, trabajan juntos o comparten desarrollos. Te proponemos que los invites a sumarse a
+              nuestro equipo de trabajo.
+            </p>
+            <p>¡Sumá tu Referido!</p>
+          </ion-text>
+
+
+          <br>
+
+          <div >
+            <ion-button color="warning" expand="block" 
+            href="https://docs.google.com/document/d/12kP3aKssZLnXzc1eET65cyV8B5_SiCuxnzXZ2N19t4A/edit">¿Como
+            participar?</ion-button>
+
+          <br>
+          
+          <ion-button color="warning" expand="block" 
+            href="https://docs.google.com/document/d/1OlnJHfQQ4_PRPUzTDaoV2ZHGg-Mft_rjamZTFKdLVbI/edit">Reglamento
+          </ion-button>
+          <br>
+          
+           <ion-button  color="#E94E0F"  expand="block" id="s1" 
+          href="http://localhost:8100/busquedas-activas">Busquedas Activas
+        </ion-button>
+          </div>
+          
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
 </ion-content>
