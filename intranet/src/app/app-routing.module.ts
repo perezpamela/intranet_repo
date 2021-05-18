@@ -48,7 +48,8 @@ const routes: Routes = [
   {
     path: 'redes-sociales',
     loadChildren: () => import('./redes-sociales/redes-sociales.module').then( m => m.RedesSocialesPageModule)
-  },  {
+  },
+  {
     path: 'acerca-de',
     loadChildren: () => import('./acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
   },
@@ -83,6 +84,10 @@ const routes: Routes = [
   {
     path: 'procesos-org',
     loadChildren: () => import('./procesos-org/procesos-org.module').then( m => m.ProcesosOrgPageModule)
+  },
+  {
+    path: 'busquedas-activas',
+    loadChildren: () => import('./busquedas-activas/busquedas-activas.module').then( m => m.BusquedasActivasPageModule)
   },
 
 
