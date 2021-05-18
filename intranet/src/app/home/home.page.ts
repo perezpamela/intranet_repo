@@ -82,7 +82,10 @@ export class HomePage implements OnInit {
     this._router.navigate(['/procesos-org']);
     this.menu.close()
   }
-  
+  busquedasactivas(){
+    this._router.navigate(['/busquedas-activas']);
+    this.menu.close()
+  }
   
   
   
