@@ -86,7 +86,13 @@ export class HomePage implements OnInit {
     this._router.navigate(['/busquedas-activas']);
     this.menu.close()
   }
-  
+  dicsyanos(){
+    this._router.navigate(['/dicsyanos']);
+    this.menu.close()
+  }
+  irApag(){
+    this._router.navigate(['/dicsyanos']);//dirige a dicsyanos
+  }
   
   
   
