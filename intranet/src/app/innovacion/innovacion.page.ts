@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioDatosService } from '../servicios/usuario-datos.service';
 
+
 @Component({
   selector: 'app-innovacion',
   templateUrl: './innovacion.page.html',
@@ -22,5 +23,4 @@ export class InnovacionPage implements OnInit {
     this.usuarioDatosService.devolverColor(this.color)
     this.usuarioDatosService.refreshMenu();
   }
-
 }

@@ -1,15 +1,65 @@
-<ion-header >
+<<ion-header>
   <ion-item style="--ion-background-color:#0075BE;  color:rgb(255, 255, 255)">
 
-    <ion-buttons slot="start" >
-      <ion-back-button (click)="volverInicio()"></ion-back-button>
-  </ion-buttons>
-    <ion-title >innovacion</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Innovacion</ion-title>
   </ion-item>
 </ion-header>
 
 
 
 <ion-content>
+  <ion-item>
+  
+    <ion-slides  id="novedades-slides" pager="true" [options]="slideOpts" style="--bullet-background: #0075BE; --bullet-background-active: #53AF32; margin-left: 0px ;margin-right: 0px;"> 
+       
+      <ion-slide>
+        <ion-card style=" box-shadow: none; margin-bottom: 30px; background: url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/06/compremosya.png'); background-repeat: no-repeat; background-size: cover; height: 180px; ">
+          <ion-card-header>
+            <p style=" text-shadow: 0 0 4px #ffffff;opacity: 0.8;color: black;font-size:xx-large">Compremosya!</p>
+            <p style=" text-shadow: 0 0 4px #000000;opacity: 0.8;color: rgb(255, 255, 255);font-size:large">Plataforma WEB E-Comerce</p>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
 
+      <ion-slide>
+        <ion-card style=" box-shadow: none; margin-bottom: 30px; background: url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/06/Nexcolab.png'); background-repeat: no-repeat; background-size: cover; height: 180px;">
+          <ion-card-header>
+            <p style=" text-shadow: 0 0 4px #ffffff;opacity: 0.8;color: black;font-size:xx-large">ㅤㅤNexcolabㅤㅤ</p>
+            <p style=" text-shadow: 0 0 4px #000000;opacity: 0.8;color: rgb(255, 255, 255);font-size:large">Plataforma Web y Mobil</p>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card style=" box-shadow: none; margin-bottom: 30px; background: url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/06/blue-covid-19-1400x693_0.jpg'); background-repeat: no-repeat; background-size: cover; height: 180px;">
+          <ion-card-header>
+            <p style=" text-shadow: 0 0 4px #ffffff;opacity: 0.8;color: black;font-size:xx-large">App Covid Coe!</p>
+            <p style=" text-shadow: 0 0 4px #000000;opacity: 0.8;color: rgb(255, 255, 255);font-size:large">Plataforma Mobil</p>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+
+    </ion-slides>
+    
+  </ion-item>    
+  <div class="flex-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button class="" color="primary"   expand="block" href='https://docs.google.com/document/d/1-9G0SlYxh9zdmbALaqn3eXfqtZbVkgdB7vlwTwxAqMs/edit?usp=sharing'>APP COVID-COE</ion-button>
+          <ion-button class="" color="secondary" expand="block" href='https://docs.google.com/document/d/1_OxNuxcXLuj6KPXgcjANXbrcTYa1Jf3d7S1fQGp1kp8/edit?usp=sharing'>Compremos ya</ion-button>
+          <ion-button class="" color="tertiary"  expand="block" href='https://docs.google.com/document/d/1e_07lNnINC3nYvVLfX3xiU-ehW-U7uqegrNBtIY5U7w/edit?usp=sharing'>Oferta y Demanda</ion-button>
+          <ion-button class="" color="primary"   expand="block" href='https://docs.google.com/document/d/1jmLUcuWy0pBD3UXwF8ZGfc3xIOJb6vtqik1PC3i3B0E/edit?usp=sharing'>Certificados BlockChain</ion-button>
+          <ion-button class="" color="secondary" expand="block" href='https://docs.google.com/document/d/1s7UXV1b9JE7OXBgzg0QrzKxkiRsh-zn5-SOmUYU9pV8/edit?usp=sharing'>Ecosistemas Jhon deere</ion-button>
+          <ion-button class="" color="tertiary"  expand="block" href='https://docs.google.com/document/d/1iuNG0XYtDDNVwMwl-ZpD-yreWcwTdFs0BoT2_nrUEfg/edit?usp=sharing'>Realidad Aumentada</ion-button>
+          <ion-button class="" color="primary"   expand="block" href='https://docs.google.com/document/d/1pa4mHZgV0okIagwEQnDwCRucSzmKhqmfwAoKf_hxwuY/edit?usp=sharing'>Advanced Analytics Express</ion-button>
+          <ion-button class="" color="secondary" expand="block" href='https://docs.google.com/document/d/15sjLBxAelSUSyS9YB3lvUG5FvQpV6Vt_hBXc4mf-itg/edit?usp=sharing'>Retails Analytics Application</ion-button>
+          <ion-button class="" color="tertiary"  expand="block" href='https://docs.google.com/document/d/19De4rNTLJMf0dHfOwxb-8I_SQcnFsiJ0RbuumJ4-puA/edit?usp=sharing'>Inteligencia Emocional</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

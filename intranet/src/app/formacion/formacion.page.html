@@ -1,15 +1,261 @@
-<ion-header >
+<ion-header>
   <ion-item style="--ion-background-color:#0075BE;  color:rgb(255, 255, 255)">
 
-    <ion-buttons slot="start" >
-      <ion-back-button (click)="volverInicio()"></ion-back-button>
-  </ion-buttons>
-    <ion-title >formacion</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Formacion</ion-title>
   </ion-item>
 </ion-header>
 
-
-
 <ion-content>
+  <ion-slides
+    id="novedades-slides"
+    pager="true"
+    [options]="slideOpts"
+    style="
+      --bullet-background: #0075be;
+      --bullet-background-active: #53af32;
+      margin-left: 0px;
+      margin-right: 0px;
+    "
+  >
+    <ion-slide>
+      <ion-card
+        style="
+          box-shadow: none;
+          margin-bottom: 30px;
+          background: url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/07/marketing-online-en-coruna-250x250.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 180px;
+        "
+      >
+        <ion-card-header>
+          <p
+            style="
+              text-shadow: 0 0 4px #ffffff;
+              opacity: 0.8;
+              color: black;
+              font-size: xx-large;
+            "
+          >
+          Seminario Marketing Online
+          </p>
+          <p
+            style="
+              text-shadow: 0 0 4px #000000;
+              opacity: 0.8;
+              color: rgb(255, 255, 255);
+              font-size: large;
+            "
+          >
+          23 de Septiembre de 19 a 21 hs
+          </p>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
 
+    <ion-slide>
+      <ion-card
+        style="
+          box-shadow: none;
+          margin-bottom: 30px;
+          background: url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/07/unnamed-11-250x250.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 180px;
+        "
+      >
+        <ion-card-header>
+          <p
+            style="
+              text-shadow: 0 0 4px #ffffff;
+              opacity: 0.8;
+              color: black;
+              font-size: xx-large;
+            "
+          >
+          Liderazgo, Coaching y Gestión del Cambio
+          </p>
+          <p
+            style="
+              text-shadow: 0 0 4px #000000;
+              opacity: 0.8;
+              color: rgb(255, 255, 255);
+              font-size: large;
+            "
+          >
+          Cursada de 03/08/20 al 31/08/20
+          </p>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card
+        style="
+          box-shadow: none;
+          margin-bottom: 30px;
+          background: url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/07/unnamed-5-250x250.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 180px;
+        "
+      >
+        <ion-card-header>
+          <p
+            style="
+              text-shadow: 0 0 4px #ffffff;
+              opacity: 0.8;
+              color: black;
+              font-size: xx-large;
+            "
+          >
+          Conducción de Reuniones
+          </p>
+          <p
+            style="
+              text-shadow: 0 0 4px #000000;
+              opacity: 0.8;
+              color: rgb(255, 255, 255);
+              font-size: large;
+            "
+          >
+          Cursada de 03/08/20 al 31/08/20
+          </p>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card
+        style="
+          box-shadow: none;
+          margin-bottom: 30px;
+          background: url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/07/rawpixel-558597-unsplash-250x250.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 180px;
+        "
+      >
+        <ion-card-header>
+          <p
+            style="
+              text-shadow: 0 0 4px #ffffff;
+              opacity: 0.8;
+              color: black;
+              font-size: xx-large;
+            "
+          >
+          ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+          </p>
+          <p
+            style="
+              text-shadow: 0 0 4px #000000;
+              opacity: 0.8;
+              color: rgb(255, 255, 255);
+              font-size: large;
+            "
+          >
+          ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+          </p>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card
+        style="
+          box-shadow: none;
+          margin-bottom: 30px;
+          background: url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/07/33-335429_laptop-work-png-transparent-png-250x250.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 180px;
+        "
+      >
+        <ion-card-header>
+          <p
+            style="
+              text-shadow: 0 0 4px #ffffff;
+              opacity: 0.8;
+              color: black;
+              font-size: xx-large;
+            "
+          >
+          ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+          </p>
+          <p
+            style="
+              text-shadow: 0 0 4px #000000;
+              opacity: 0.8;
+              color: rgb(255, 255, 255);
+              font-size: large;
+            "
+          >
+          ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+          </p>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card
+        style="
+          box-shadow: none;
+          margin-bottom: 30px;
+          background: url('http://190.210.221.15:9500/intranet/wp-content/uploads/2020/07/soporte-tecnico-empresarial-250x250.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 180px;
+        "
+      >
+        <ion-card-header>
+          <p
+            style="
+              text-shadow: 0 0 4px #ffffff;
+              opacity: 0.8;
+              color: black;
+              font-size: xx-large;
+            "
+          >
+          ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+          </p>
+          <p
+            style="
+              text-shadow: 0 0 4px #000000;
+              opacity: 0.8;
+              color: rgb(255, 255, 255);
+              font-size: large;
+            "
+          >
+          ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+          </p>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+    </ion-slides>
+
+  <div>
+    <ion-button color="primary" expand="block" (click)="IrDesSof()">Desarrollo de Software</ion-button>
+    <br />
+    <ion-button color="primary" expand="block" (click)="IrBaseDeDatos()">Base de datos</ion-button>
+    <br />
+    <ion-button color="primary" expand="block" (click)="IrTesSof()">Testing de Software</ion-button>
+    <br />
+    <ion-button color="primary" expand="block" (click)="IrBintelig()">Business Intelligence</ion-button>
+    <br />
+    <ion-button color="primary" expand="block" (click)="IrMetodTrabajo()">Metodologías de trabajo</ion-button>
+    <br />
+    <ion-button color="primary" expand="block" (click)="irRecursosHumanos()">Recursos humanos</ion-button>
+    <br />
+    <ion-button color="primary" expand="block" (click)="irOtros()">Otros</ion-button>
+  </div>
+
+
+<section class="centrar">
+  <h1 size="small" >¿Que te gustaria aprender?</h1>
+  <ion-button size="small" href="https://docs.google.com/forms/d/e/1FAIpQLSeJb-2_djET18YOuaXGJD0wxl-cdXmkolzwRHZGolISLcx2DQ/viewform"color="secondary"class="centrar">Enviar una Respuesta</ion-button>
+</section>
 </ion-content>

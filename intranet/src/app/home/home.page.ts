@@ -82,9 +82,34 @@ export class HomePage implements OnInit {
     this._router.navigate(['/procesos-org']);
     this.menu.close()
   }
-  
-  
-  
+  busquedasactivas(){
+    this._router.navigate(['/busquedas-activas']);
+    this.menu.close()
+  }
+  dicsyanos(){
+    this._router.navigate(['/dicsyanos']);
+  }
+  DesSof(){
+    this._router.navigate(['/DesSof']);//dirige a DesSof
+  }
+  BaseDeDatos(){
+    this._router.navigate(['/BaseDeDatos']);//dirige a BaseDeDatos
+  }
+  TesSof(){
+    this._router.navigate(['/TesSof']);//dirige a TesSof
+  }
+  Bintelig(){
+    this._router.navigate(['/Bintelig']);//dirige a Bintelig
+  }
+  MetodTrabajo(){
+    this._router.navigate(['/MetodTrabajo']);//dirige a MetodTrabajo
+  }
+  RecHumanos(){
+    this._router.navigate(['/RecHumanos']);//dirige a Recursos humanos
+  }
+  Otros(){
+    this._router.navigate(['/Otros']);//dirige a Otros
+  }
   
   
   

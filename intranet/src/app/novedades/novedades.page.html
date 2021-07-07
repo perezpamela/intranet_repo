@@ -1,86 +1,85 @@
-<ion-content >
+<ion-content>
   <div class="body">
 
-  <ion-header >
-    <ion-item style="--ion-background-color:#53AF32; box-shadow: 0px 1px 10px rgba(177, 177, 177, 0.5); color:aliceblue">
-      <ion-buttons slot="start" >
-        <ion-button (click)="tMenu()">
-          <ion-icon slot="icon-only" name="menu"></ion-icon>
-        </ion-button>
-        <!-- el atributo  menu="main-menu"   apunta al menu deseado....SE OMITE SI SOLO HAY UN MENU WE (el mismo main-menu en el hhtplogout) -->
-      </ion-buttons>
-      <ion-title >Novedades</ion-title>
+    <ion-header>
+      <ion-item
+        style="--ion-background-color:#53AF32; box-shadow: 0px 1px 10px rgba(177, 177, 177, 0.5); color:aliceblue">
+        <ion-buttons slot="start">
+          <ion-button (click)="tMenu()">
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+          </ion-button>
+          <!-- el atributo  menu="main-menu"   apunta al menu deseado....SE OMITE SI SOLO HAY UN MENU WE (el mismo main-menu en el hhtplogout) -->
+        </ion-buttons>
+        <ion-title>Novedades</ion-title>
 
-      <ion-icon name="home" (click)="volverInicio()" > </ion-icon>
-    </ion-item>
-  </ion-header>
-
-
-
-
-
-  <main style="min-height: 91vh; margin-bottom: -72px;">
-    
-    
-
-
-    <ion-slides pager="true" [options]="slideOpts" style="--bullet-background: #0075BE; --bullet-background-active: #53AF32; ">
-      <ion-slide  *ngFor="let da of data,let i = index" style=" display: block;">
-  
-        <ion-card  [style]=colorElegido[i].codigo style=" align-items: center; justify-content: center; " >
-        
-
-          <div>
-            <ion-avatar class="img">
-              <img [src]=da.imagen>
-            </ion-avatar> 
-          </div>
-          <div >
-
-            <h1>Saludos {{da.nombre}}</h1>
-            
-            <h2>{{da.funcion}}</h2>
-            <h2 style="margin-bottom: 20px;">Sede {{da.sede}}</h2>       
-
-          </div>
-
-        </ion-card>
-
-      </ion-slide>
-    </ion-slides>
+        <ion-icon name="home" (click)="volverInicio()"> </ion-icon>
+      </ion-item>
+    </ion-header>
 
 
 
 
 
-<div style="margin-left: 5%;margin-right: 5%;">
-  <div style="text-align:center;background-color: #53AF32;height: 100px; border-radius: 5px 5px 50% 50%;">
-  <h1 style="padding: 5%;">Cumpleaños de este mes</h1>
-  </div>
-
-  <div>
-  <h2 style="text-align: right">Cumpleaños de este mes</h2>
-  <h2>Cumpleaños de este mes</h2>
-  <h2 style="text-align: right">Cumpleaños de este mes</h2>
-  <h2>Cumpleaños de este mes</h2>
-  </div>
-
-</div>
+    <main style="min-height: 91vh; margin-bottom: -72px;">
 
 
 
 
+      <ion-slides pager="true" [options]="slideOpts"
+        style="--bullet-background: #0075BE; --bullet-background-active: #53AF32; ">
+        <ion-slide *ngFor="let da of data,let i = index" style=" display: block;">
+
+          <ion-card [style]=colorElegido[i].codigo style=" align-items: center; justify-content: center; ">
+
+
+            <div>
+              <ion-avatar class="img">
+                <img [src]=da.imagen>
+              </ion-avatar>
+            </div>
+            <div>
+
+              <h1>Saludos {{da.nombre}}</h1>
+
+              <h2>{{da.funcion}}</h2>
+              <h2 style="margin-bottom: 20px;">Sede {{da.sede}}</h2>
+
+            </div>
+
+          </ion-card>
+
+        </ion-slide>
+      </ion-slides>
 
 
 
 
 
+      <div class="flex-container">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="nTitle" style="background: #30a4dc;">
+                <br>
+                <ion-title  class="tituloC" >CUMPLEAÑOS</ion-title>
+              </div>
+              <ion-card
+                href="https://calendar.google.com/calendar/embed?src=dicsyscalendario%40gmail.com&ctz=America%2FArgentina%2FCordoba">
+                <img  class="imgEc" src="https://i.imgur.com/UmrtCPM.png">
 
-    <div style="height: 72px;"></div>
-  </main>
+              </ion-card>
+              
+              <div class="nTitle" style="background: #30a4dc;">
+                <br>
+                <ion-title class="tituloE">EVENTOS</ion-title>
+              </div>
+              <ion-card href=" https://calendar.google.com/calendar/embed?src=pq03d4e7h1098dpd7jj86a6ba4%40group.calendar.google.com&ctz=America%2FArgentina%2FCordoba
+            ">
+                <img   class="imgEc" src="https://i.imgur.com/FDvQCD4.png">
 
-
-    <app-footer></app-footer>
-
-  </div>
-</ion-content>
+              </ion-card>
+             
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>

@@ -48,7 +48,8 @@ const routes: Routes = [
   {
     path: 'redes-sociales',
     loadChildren: () => import('./redes-sociales/redes-sociales.module').then( m => m.RedesSocialesPageModule)
-  },  {
+  },
+  {
     path: 'acerca-de',
     loadChildren: () => import('./acerca-de/acerca-de.module').then( m => m.AcercaDePageModule)
   },
@@ -83,6 +84,42 @@ const routes: Routes = [
   {
     path: 'procesos-org',
     loadChildren: () => import('./procesos-org/procesos-org.module').then( m => m.ProcesosOrgPageModule)
+  },
+  {
+    path: 'busquedas-activas',
+    loadChildren: () => import('./busquedas-activas/busquedas-activas.module').then( m => m.BusquedasActivasPageModule)
+  },
+  {
+    path: 'dicsyanos',
+    loadChildren: () => import('./dicsyanos/dicsyanos.module').then( m => m.DicsyanosPageModule)
+  },
+  {
+    path: 'des-sof',
+    loadChildren: () => import('./des-sof/des-sof.module').then( m => m.DesSofPageModule)
+  },
+  {
+    path: 'base-de-datos',
+    loadChildren: () => import('./base-de-datos/base-de-datos.module').then( m => m.BaseDeDatosPageModule)
+  },
+  {
+    path: 'tes-sof',
+    loadChildren: () => import('./tes-sof/tes-sof.module').then( m => m.TesSofPageModule)
+  },
+  {
+    path: 'bintelig',
+    loadChildren: () => import('./bintelig/bintelig.module').then( m => m.BinteligPageModule)
+  },
+  {
+    path: 'metod-trabajo',
+    loadChildren: () => import('./metod-trabajo/metod-trabajo.module').then( m => m.MetodTrabajoPageModule)
+  },
+  {
+    path: 'rec-humanos',
+    loadChildren: () => import('./rec-humanos/rec-humanos.module').then( m => m.RecHumanosPageModule)
+  },
+  {
+    path: 'otros',
+    loadChildren: () => import('./otros/otros.module').then( m => m.OtrosPageModule)
   },
 
 
